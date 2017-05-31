@@ -1,0 +1,14 @@
+public class Solution {
+    public int hammingDistance(int x, int y) {
+        int k = x^y;
+        int counter = 0;
+        while (k>0) {
+            int hasOne = k&1;
+            if (hasOne == 1){
+                counter++;
+            }
+            k /= 2;
+        }
+        return counter;
+    }
+}
