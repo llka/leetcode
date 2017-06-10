@@ -1,0 +1,38 @@
+public class Solution {
+    private static final int X = 0;
+    private static final int Y = 1;
+
+    public boolean validSquare(int[] p1, int[] p2, int[] p3, int[] p4) {
+        ArrayList<Double> segments = new ArrayList(6);
+        segments.add(calcDistance(p1,p2));
+        segments.add(calcDistance(p1,p3));
+        segments.add(calcDistance(p1,p4));
+        segments.add(calcDistance(p2,p3));
+        segments.add(calcDistance(p2,p4));
+        segments.add(calcDistance(p3,p4));
+
+        Collections.sort(segments);
+        double diagonal = segments.get(5);
+        double side = segments.get(3);
+        int diagCount = 1;
+        int sideCount = 0;
+        for(int i = 0; i < segments.size()-1; i++){
+            double segment = segments.get(i);
+            if(segment == diagonal){
+                diagCount++;
+            }else if(segment == side){
+                sideCount++;
+            }
+        }
+        
+        return diagCount == 2 && sideCount == 4;
+    }
+    
+    private double calcDistance(int[] p1, int[] p2){
+        int x1 = p1[X];
+        int y1 = p1[Y];
+        int x2 = p2[X];
+        int y2 = p2[Y];
+        return Math.pow(x1-x2,2) + Math.pow(y1-y2,2);
+    }
+}
