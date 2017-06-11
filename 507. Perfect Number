@@ -1,0 +1,17 @@
+public class Solution {
+    public boolean checkPerfectNumber(int num) {
+        int sum = 1;
+        int num2 = num;
+        
+        while(num2 > 2 && num2 % 2 == 0){
+            sum += num2/2;
+            num2 /= 2;
+        }
+        for (int i = 2; i < Math.sqrt(num); i++) {
+            if(num % i == 0){
+                sum += i;
+            }
+        }
+        return sum == num && num > 1;
+    }
+}
