@@ -1,0 +1,14 @@
+public class Solution {
+    public int minMoves(int[] nums) {
+        List<Integer> sortedNums = Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.toList());
+        Collections.sort(sortedNums);
+        int minNum = sortedNums.get(0);
+        int moves = 0;
+        for (int i = 1 ; i < sortedNums.size(); i++) {
+            moves += (sortedNums.get(i)-minNum);
+        }
+        return moves;
+    }
+}
