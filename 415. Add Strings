@@ -1,0 +1,30 @@
+public class Solution {
+   public String addStrings(String num1, String num2) {
+         StringBuilder result = new StringBuilder();
+        char[] n1 = num1.toCharArray();
+        char[] n2 = num2.toCharArray();
+
+        int size1 = n1.length - 1;
+        int size2 = n2.length - 1;
+        int mindSum = 0;
+        while (size1 >= 0 && size2 >= 0){
+            int sum = n2[size2--] + n1[size1--] + mindSum - 96;
+            mindSum = sum > 9 ? 1 : 0;
+            result.insert(0, sum % 10);
+        }
+        while (size2 >= 0){
+            int sum = n2[size2--] + mindSum - 48;
+            mindSum = sum > 9 ? 1 : 0;
+            result.insert(0, sum % 10);
+        }
+        while (size1 >= 0){
+            int sum = n1[size1--] + mindSum - 48;
+            mindSum = sum > 9 ? 1 : 0;
+            result.insert(0, sum % 10);
+        }
+        if(mindSum > 0){
+            result.insert(0, 1);
+        }
+        return result.toString();
+    }
+}
