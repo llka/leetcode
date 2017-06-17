@@ -1,0 +1,12 @@
+public class Solution {
+    public int titleToNumber(String s) {
+        final int A_NUMBER = 64;
+        final int Z_NUMBER = 26;
+        int length = s.length();
+        int result = 0;
+        for (int i = 0; i < length; i++) {
+            result += Math.pow(Z_NUMBER,length-i-1)*((int)s.charAt(i) - A_NUMBER);
+        }
+        return result;
+    }
+}
