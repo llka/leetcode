@@ -1,0 +1,20 @@
+/*
+https://leetcode.com/problems/palindrome-number/description/
+9. Palindrome Number
+*/
+public boolean isPalindrome(int x) {
+        if (x < 0) {
+            /*isPalindrome(-x);*/
+            return false;
+        }
+        if (x < 10) {
+            return true;
+        }
+        long xLast = x;
+        StringBuilder reversedX = new StringBuilder("");
+        while (xLast != 0) {
+            reversedX.append(xLast % 10);
+            xLast /= 10;
+        }
+        return Long.parseLong(String.valueOf(reversedX)) == x;
+    }
