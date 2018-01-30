@@ -1,0 +1,44 @@
+/*
+69. Sqrt(x)
+Implement int sqrt(int x).
+
+Compute and return the square root of x.
+
+x is guaranteed to be a non-negative integer.
+*/
+
+public class Solution {
+    private static final Logger logger = LogManager.getLogger(Solution.class);
+
+    public int mySqrt(int x) {
+        if (x == 0) {
+            return 0;
+        }
+        int left = 1;
+        int right = Integer.MAX_VALUE;
+        int ans = 0;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (mid > x / mid) {
+                right = mid - 1;
+            } else {
+                ans = mid;
+                left = mid + 1;
+            }
+        }
+        return ans;
+    }
+
+    private int geronSqrt(int a) {
+        double assumptedSqrt = 2;
+        double x1 = assumptedSqrt;
+        double x2 = assumptedSqrt;
+        int iterationsCount = 50;
+        for (int i = 0; i < iterationsCount; i++) {
+            x2 = (x1 + a / x1) * 0.5;
+            x1 = x2;
+        }
+        return (int) Math.floor(x2);
+    }
+}
