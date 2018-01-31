@@ -12,9 +12,16 @@ public class Solution {
             return size;
         }
         int maxOnLine = 2;
+
         for (int i = 0; i < size; i++) {
+            int duplicates = 0;
             for (int j = i + 1; j < size; j++) {
-                int lineIJCount = 2;
+                int lineIJCount = 2 + duplicates;
+                if (areDuplicates(points[i], points[j])) {
+                    ++duplicates;
+                    maxOnLine = lineIJCount > maxOnLine ? lineIJCount : maxOnLine;
+                    continue;
+                }
                 for (int k = j + 1; k < size; k++) {
                     if (areOnOneLine(points[i], points[j], points[k])) {
                         lineIJCount++;
@@ -29,8 +36,6 @@ public class Solution {
 
     private boolean areOnOneLine(Point a, Point b, Point c) {
         double epsilon = 0.00001;
-//     return Math.abs((c.x - a.x) * (b.y - a.y) - (c.y - a.y) * (b.x - a.x)) < epsilon;
-//     return Math.abs((c.x - a.x) * (a.y - b.y) + (c.y - a.y) * (b.x - a.x)) < epsilon;
         long A = c.x - a.x;
         long B = b.x - a.x;
         long C = c.y - a.y;
@@ -38,31 +43,42 @@ public class Solution {
 
         if (A == 0 && B != 0 && C != 0) {
             return false;
-        } else if (A == 0 && (B == 0 || C == 0)) {
+        }
+        if (A == 0 && (B == 0 || C == 0)) {
             return true;
         }
 
         if (B == 0 && A != 0 && D != 0) {
             return false;
-        } else if (B == 0 && (A == 0 || D == 0)) {
+        }
+        if (B == 0 && (A == 0 || D == 0)) {
             return true;
         }
 
         if (C == 0 && A != 0 && D != 0) {
             return false;
-        } else if (C == 0 && (A == 0 || D == 0)) {
+        }
+        if (C == 0 && (A == 0 || D == 0)) {
             return true;
         }
 
         if (D == 0 && B != 0 && C != 0) {
             return false;
-        } else if (D == 0 && (B == 0 || C == 0)) {
+        }
+        if (D == 0 && (B == 0 || C == 0)) {
             return true;
         }
 
         return Math.abs(A * D - B * C) < epsilon;
     }
 
+    private boolean areDuplicates(Point a, Point b) {
+        return a.x == b.x && a.y == b.y;
+    }
+
+    private boolean areVertical(Point a, Point b) {
+        return a.x == b.x;
+    }
 
 
     static class Point {
@@ -73,6 +89,7 @@ public class Solution {
             x = 0;
             y = 0;
         }
+
         Point(int a, int b) {
             x = a;
             y = b;
