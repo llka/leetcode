@@ -1,0 +1,33 @@
+Given an integer array, find three numbers whose product is maximum and output the maximum product.
+https://leetcode.com/problems/maximum-product-of-three-numbers/description/
+
+
+public class Solution {
+    private static final Logger logger = LogManager.getLogger(Solution.class);
+
+    public int maximumProduct(int[] nums) {
+        ArrayList<Integer> positives = new ArrayList<>(3);
+        for (int i = 0; i < 3; i++) {
+            positives.add(0);
+        }
+
+        int negative1 = 0;
+        int negative2 = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            if (num > positives.get(0)) {
+                positives.remove(0);
+                positives.add(num);
+                positives.sort(Comparator.naturalOrder());
+                logger.info(positives);
+            }
+            if (num < Math.max(negative1, negative2)) {
+                negative1 = Math.min(negative1, negative2);
+                negative2 = num;
+            }
+        }
+
+        return Math.max((negative1 * negative2 * positives.get(2)), (positives.get(0) * positives.get(1) * positives.get(2)));
+    }
+}
