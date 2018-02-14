@@ -1,0 +1,28 @@
+/*
+Given an integer n, return the number of trailing zeroes in n!.
+
+Note: Your solution should be in logarithmic time complexity.
+
+5! = 120 -> 1
+
+counting fives in numbers, but 25 has 2 fives, 625 - 3, etc
+*/
+
+public class Solution {
+
+    public int trailingZeroes(int n) {
+        return n == 0 ? 0 : n / 5 + trailingZeroes(n / 5);
+        
+//        int fives = 0;
+//        int powerOfFives = 0;
+//        for (int i = 5; i <= n; i++) {
+//            int numWithSeveral5 = i;
+//            while (numWithSeveral5 % 5 == 0) {
+//                fives++;
+//                numWithSeveral5 /= 5;
+//            }
+//        }
+//        return fives;
+    }
+}
+
