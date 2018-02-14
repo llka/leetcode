@@ -1,0 +1,98 @@
+/*
+https://leetcode.com/problems/add-binary/description/
+
+Given two binary strings, return their sum (also a binary string).
+
+For example,
+a = "11"
+b = "1"
+Return "100".
+
+*/
+
+public class Solution {
+    private static final Logger logger = LogManager.getLogger(Solution.class);
+    private boolean previousSum = false;
+
+    public String addBinary(String a, String b) {
+        StringBuilder sum = new StringBuilder("");
+        int lengthA = a.length();
+        int lengthB = b.length();
+
+        if (lengthA > lengthB) {
+            for (int i = 1; i <= lengthB; i++) {
+                if (previousSum) {
+                    sum.insert(0, addThreeBinaryDigits(a.charAt(lengthA - i), b.charAt(lengthB - i)));
+                } else {
+                    sum.insert(0, addTwoBinaryDigits(a.charAt(lengthA - i), b.charAt(lengthB - i)));
+                }
+            }
+            for (int i = lengthB + 1; i <= lengthA; i++) {
+                if (previousSum) {
+                    sum.insert(0, addTwoBinaryDigits(a.charAt(lengthA - i), '1'));
+                } else {
+                    sum.insert(0, a.charAt(lengthA - i));
+                }
+            }
+            if (previousSum) {
+                sum.insert(0, "1");
+            }
+        } else {
+            for (int i = 1; i <= lengthA; i++) {
+                if (previousSum) {
+                    sum.insert(0, addThreeBinaryDigits(a.charAt(lengthA - i), b.charAt(lengthB - i)));
+                } else {
+                    sum.insert(0, addTwoBinaryDigits(a.charAt(lengthA - i), b.charAt(lengthB - i)));
+                }
+            }
+            for (int i = lengthA + 1; i <= lengthB; i++) {
+                if (previousSum) {
+                    sum.insert(0, addTwoBinaryDigits(b.charAt(lengthB - i), '1'));
+                } else {
+                    sum.insert(0, b.charAt(lengthB - i));
+                }
+            }
+            if (previousSum) {
+                sum.insert(0, "1");
+            }
+        }
+        return sum.toString();
+    }
+
+    private String addTwoBinaryDigits(char a, char b) {
+        int sum = a + b - 96;
+        switch (sum) {
+            case 0:
+                previousSum = false;
+                return "0";
+            case 1:
+                previousSum = false;
+                return "1";
+            case 2:
+                previousSum = true;
+                return "0";
+            default:
+                return "Invalid input";
+        }
+    }
+
+    private String addThreeBinaryDigits(char a, char b) {
+        int sum = a + b - 95;
+        switch (sum) {
+            case 0:
+                previousSum = false;
+                return "0";
+            case 1:
+                previousSum = false;
+                return "1";
+            case 2:
+                previousSum = true;
+                return "0";
+            case 3:
+                previousSum = true;
+                return "1";
+            default:
+                return "Invalid input";
+        }
+    }
+}
