@@ -1,0 +1,57 @@
+/*
+https://leetcode.com/problems/erect-the-fence/description/
+*/
+/**
+ * Definition for a point.
+ * class Point {
+ *     int x;
+ *     int y;
+ *     Point() { x = 0; y = 0; }
+ *     Point(int a, int b) { x = a; y = b; }
+ * }
+ */
+class Solution {
+    public List<Point> outerTrees(Point[] points) {
+        int size = points.length;
+        HashSet<Point> fence = new HashSet<>();
+        if (size < 4) {
+            return Arrays.asList(points);
+        }
+        int leftMost = 0;
+        for (int i = 0; i < size; i++) {
+            if (points[i].x < points[leftMost].x) {
+                leftMost = i;
+            }
+        }
+        int p = leftMost;
+        do {
+            int q = (p + 1) % size;
+            for (int i = 0; i < size; i++) {
+                if (orientation(points[p], points[i], points[q]) < 0) {
+                    q = i;
+                }
+            }
+            for (int i = 0; i < size; i++) {
+                if (i != p && i != q && orientation(points[p], points[i], points[q]) == 0 && isBetween(points[p], points[i], points[q])) {
+                    fence.add(points[i]);
+                }
+            }
+            fence.add(points[q]);
+            p = q;
+        }
+        while (p != leftMost);
+        return new ArrayList<Point>(fence);
+
+    }
+
+    private int orientation(Point lastInFence, Point current, Point anyOther) {
+        int scalarProduct = (current.x - lastInFence.x) * (anyOther.y - current.y) - (current.y - lastInFence.y) * (anyOther.x - current.x);
+        return scalarProduct;
+    }
+
+    private boolean isBetween(Point a, Point b, Point c) {
+        boolean b1 = ((a.x <= b.x) && (b.x <= c.x)) || ((b.x <= a.x) && (b.x >= c.x));
+        boolean b2 = ((a.y <= b.y) && (b.y <= c.y)) || ((b.y <= a.y) && (b.y >= c.y));
+        return b1 && b2;
+    }
+}
