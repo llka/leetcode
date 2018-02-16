@@ -1,7 +1,6 @@
 /*
-  https://leetcode.com/problems/erect-the-fence/description/
-
-
+ * https://leetcode.com/problems/erect-the-fence/description/
+  
  * Definition for a point.
  * class Point {
  *     int x;
