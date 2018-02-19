@@ -1,0 +1,79 @@
+/*
+Given a char array representing tasks CPU need to do. It contains capital letters A to Z where different letters represent different tasks.Tasks could be done without original order. Each task could be done in one interval. For each interval, CPU could finish one task or just be idle.
+
+However, there is a non-negative cooling interval n that means between two same tasks, there must be at least n intervals that CPU are doing different tasks or just be idle.
+
+You need to return the least number of intervals the CPU will take to finish all the given tasks.
+
+Example 1:
+  Input: tasks = ["A","A","A","B","B","B"], n = 2
+  Output: 8
+  Explanation: A -> B -> idle -> A -> B -> idle -> A -> B.
+*/
+
+public class Solution {
+    private static final Logger logger = LogManager.getLogger(Solution.class);
+    private static final int ALPHABET_SIZE = 26;
+    private static final int ALPHABET_START_IDX = 65;
+
+    public int leastInterval(char[] tasks, int n) {
+        int[] sortedTasks = new int[ALPHABET_SIZE];
+
+        for (int i = 0; i < tasks.length; i++) {
+            char task = tasks[i];
+            int taskIdx = tasks[i] - ALPHABET_START_IDX;
+            sortedTasks[tasks[i] - ALPHABET_START_IDX]++;
+        }
+
+        int unrealizedTasksCount = tasks.length;
+
+        Arrays.sort(sortedTasks);
+
+        int first = 0;
+        while (sortedTasks[first] < 0){
+            first++;
+        }
+
+        int time = 0;
+        int frameSize = n + 1;
+
+        while (unrealizedTasksCount > 0) {
+            int lastLargestIdx = 26;
+            for (int i = 0; i < frameSize - 1; i++) {
+                int largestIdx = findLargestIdx(sortedTasks, first, lastLargestIdx);
+                if (largestIdx > 0) {
+                    lastLargestIdx = largestIdx;
+                } else {
+                    if (unrealizedTasksCount > 0) {
+                        return time + unrealizedTasksCount * frameSize;
+                    } else {
+                        return time;
+                    }
+                }
+                sortedTasks[largestIdx]--;
+                unrealizedTasksCount--;
+                if (unrealizedTasksCount == 0) {
+                    time += i + 1;
+                    return time;
+                }
+            }
+            time += frameSize;
+        }
+
+        return time;
+    }
+
+    private int findLargestIdx(int[] tasks, int first, int last) {
+        int newLargest = last - 1;
+        while (newLargest >= first) {
+            if (tasks[newLargest] > 0) {
+                return newLargest;
+            } else {
+                newLargest--;
+            }
+        }
+        return -1;
+    }
+
+}
+
