@@ -13,67 +13,72 @@ Example 1:
 
 public class Solution {
     private static final Logger logger = LogManager.getLogger(Solution.class);
-    private static final int ALPHABET_SIZE = 26;
+        private static final int ALPHABET_SIZE = 26;
     private static final int ALPHABET_START_IDX = 65;
 
     public int leastInterval(char[] tasks, int n) {
         int[] sortedTasks = new int[ALPHABET_SIZE];
+        int unrealizedTasksCount = tasks.length;
+
+        if (n == 0) {
+            return unrealizedTasksCount;
+        }
 
         for (int i = 0; i < tasks.length; i++) {
-            char task = tasks[i];
-            int taskIdx = tasks[i] - ALPHABET_START_IDX;
             sortedTasks[tasks[i] - ALPHABET_START_IDX]++;
         }
 
-        int unrealizedTasksCount = tasks.length;
-
         Arrays.sort(sortedTasks);
 
-        int first = 0;
-        while (sortedTasks[first] < 0){
-            first++;
+        int differentTasksCount = 0;
+        int k = ALPHABET_SIZE - 1;
+        int maxTask = sortedTasks[k];
+        while (sortedTasks[k] >= maxTask && k > 0) {
+            differentTasksCount++;
+            k--;
         }
 
         int time = 0;
-        int frameSize = n + 1;
+        int frameSize = n >= differentTasksCount ? n : differentTasksCount;
+        int idleTime = n >= differentTasksCount ? 1 : 0;
+        int frameEmptyPlaces = frameSize;
+        int fullFramesCount = 0;
+        int currFrame = 0;
+        
+        for (int i = ALPHABET_SIZE - 1; i > 0; i--) {
+            if (frameEmptyPlaces == 0) {
+                frameEmptyPlaces = frameSize;
+            }
 
-        while (unrealizedTasksCount > 0) {
-            int lastLargestIdx = 26;
-            for (int i = 0; i < frameSize - 1; i++) {
-                int largestIdx = findLargestIdx(sortedTasks, first, lastLargestIdx);
-                if (largestIdx > 0) {
-                    lastLargestIdx = largestIdx;
-                } else {
-                    if (unrealizedTasksCount > 0) {
-                        return time + unrealizedTasksCount * frameSize;
+            if (frameEmptyPlaces == frameSize) {
+                while (sortedTasks[i] > 0) {
+                    sortedTasks[i]--;
+                    if (sortedTasks[i] > 0) {
+                        time += frameSize + idleTime;
+                        fullFramesCount++;
                     } else {
-                        return time;
+                        time += 1;
                     }
                 }
-                sortedTasks[largestIdx]--;
-                unrealizedTasksCount--;
-                if (unrealizedTasksCount == 0) {
-                    time += i + 1;
-                    return time;
+                frameEmptyPlaces--;
+            } else if (frameEmptyPlaces > 0) {
+                while (sortedTasks[i] > 0) {
+                    sortedTasks[i]--;
+                    currFrame++;
+                    if (currFrame <= fullFramesCount) {
+
+                    } else if (currFrame > fullFramesCount) {
+                        currFrame = 0;
+                        time += 1;
+                        frameEmptyPlaces--;
+                        if (frameEmptyPlaces == 0) {
+                            fullFramesCount = 0;
+                        }
+                    }
                 }
             }
-            time += frameSize;
         }
-
         return time;
     }
-
-    private int findLargestIdx(int[] tasks, int first, int last) {
-        int newLargest = last - 1;
-        while (newLargest >= first) {
-            if (tasks[newLargest] > 0) {
-                return newLargest;
-            } else {
-                newLargest--;
-            }
-        }
-        return -1;
-    }
-
 }
 
