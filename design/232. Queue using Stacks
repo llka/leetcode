@@ -1,0 +1,72 @@
+/*
+https://leetcode.com/problems/implement-queue-using-stacks/description/
+Implement the following operations of a queue using stacks.
+
+push(x) -- Push element x to the back of queue.
+pop() -- Removes the element from in front of queue.
+peek() -- Get the front element.
+empty() -- Return whether the queue is empty.
+Notes:
+You must use only standard operations of a stack -- which means only push to top, peek/pop from top, size, and is empty operations are valid.
+
+*/
+
+    class MyQueue {
+
+        private Stack<Integer> stack;
+        int size = 0;
+
+        /**
+         * Initialize your data structure here.
+         */
+        public MyQueue() {
+            stack = new Stack<>();
+        }
+
+        /**
+         * Push element x to the back of queue.
+         */
+        public void push(int x) {
+            stack.push(x);
+            size++;
+        }
+
+        /**
+         * Removes the element from in front of queue and returns that element.
+         */
+        public int pop() {
+            Stack<Integer> newsStack = new Stack<>();
+            for (int i = 0; i < size - 1; i++) {
+                newsStack.push(stack.pop());
+            }
+            int first = stack.pop();
+            size--;
+            for (int i = 0; i < size; i++) {
+                stack.push(newsStack.pop());
+            }
+            return first;
+        }
+
+        /**
+         * Get the front element.
+         */
+        public int peek() {
+            Stack<Integer> newsStack = new Stack<>();
+            for (int i = 0; i < size - 1; i++) {
+                newsStack.push(stack.pop());
+            }
+            int first = stack.pop();
+            stack.push(first);
+            for (int i = 0; i < size - 1; i++) {
+                stack.push(newsStack.pop());
+            }
+            return first;
+        }
+
+        /**
+         * Returns whether the queue is empty.
+         */
+        public boolean empty() {
+            return stack.isEmpty();
+        }
+    }
