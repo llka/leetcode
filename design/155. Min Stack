@@ -1,0 +1,70 @@
+/*
+https://leetcode.com/problems/min-stack/description/
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+push(x) -- Push element x onto stack.
+pop() -- Removes the element on top of the stack.
+top() -- Get the top element.
+getMin() -- Retrieve the minimum element in the stack.
+*/
+
+class MinStack {
+        static class StackElement {
+            private int value;
+            private int minBelow;
+
+            public StackElement() {
+            }
+
+            public StackElement(int value, int minBelow) {
+                this.value = value;
+                this.minBelow = minBelow;
+            }
+
+            public int getValue() {
+                return value;
+            }
+
+            public int getMinBelow() {
+                return minBelow;
+            }
+        }
+
+        private StackElement[] stack;
+        private int topIdx;
+        private int minimum = 999;
+        private static final int initialLength = 10000;
+
+
+        /**
+         * initialize your data structure here.
+         */
+        public MinStack() {
+            this.stack = new StackElement[initialLength];
+            this.topIdx = -1;
+        }
+
+        public void push(int x) {
+            if (topIdx == -1) {
+                minimum = x;
+            }
+
+            stack[++topIdx] = new StackElement(x, x < minimum ? x : minimum);
+            minimum = minimum < x ? minimum : x;
+        }
+
+        public void pop() {
+            topIdx--;
+            if (topIdx > -1) {
+                minimum = stack[topIdx].getMinBelow();
+            }
+        }
+
+        public int top() {
+            return stack[topIdx].getValue();
+        }
+
+        public int getMin() {
+            return minimum;
+        }
+    }
