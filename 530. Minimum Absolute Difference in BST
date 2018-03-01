@@ -1,0 +1,60 @@
+/*
+Given a binary search tree with non-negative values, find the minimum absolute difference between values of ANY two nodes.
+*/
+
+class Solution{
+    private long minDifference = Long.MAX_VALUE;
+
+    public int getMinimumDifference(TreeNode root) {
+        helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        return (int) minDifference;
+    }
+
+    private void helper(TreeNode curr, long leftBound, long rightBound) {
+        if (curr == null) return;
+        if (leftBound != Long.MIN_VALUE) {
+            minDifference = Math.min(minDifference, curr.val - leftBound);
+        }
+        if (rightBound != Long.MAX_VALUE) {
+            minDifference = Math.min(minDifference, rightBound - curr.val);
+        }
+        helper(curr.left, leftBound, curr.val);
+        helper(curr.right, curr.val, rightBound);
+    }
+}
+
+
+
+/*
+import java.util.concurrent.atomic.AtomicInteger;
+class Solution {
+    public int getMinimumDifference(TreeNode root) {
+        AtomicInteger minDifference = new AtomicInteger(999999);
+
+        ArrayDeque<TreeNode> nodes = new ArrayDeque<>();
+        ArrayList<TreeNode> sortedNodes = new ArrayList<>();
+
+        nodes.addLast(root);
+        while (!nodes.isEmpty()) {
+            TreeNode curr = nodes.pollFirst();
+            sortedNodes.add(curr);
+            if (curr.left != null) {
+                nodes.addLast(curr.left);
+            }
+            if (curr.right != null) {
+                nodes.addLast(curr.right);
+            }
+        }
+        sortedNodes.sort((TreeNode x, TreeNode y) -> {
+            int diff = x.val - y.val;
+            if (Math.abs(diff) < minDifference.get()) {
+                minDifference.set(Math.abs(diff));
+            }
+            return diff;
+        });
+
+        return minDifference.get();
+    }
+
+}
+*/
