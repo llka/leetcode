@@ -14,21 +14,15 @@ public class Solution {
     private static final Logger logger = LogManager.getLogger(Solution.class);
 
     public void moveZeroes(int[] nums) {
-        int zeros = 0;
-        int[] nonZeros = new int[nums.length];
+        int lastNonZeroIdx = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
-                zeros++;
-            } else {
-                nonZeros[i - zeros] = nums[i];
+            if (nums[i] != 0) {
+                nums[lastNonZeroIdx++] = nums[i];
             }
         }
 
-        for (int i = 0; i < nums.length - zeros; i++) {
-            nums[i] = nonZeros[i];
-        }
-        for (int i = nums.length - zeros; i < nums.length; i++) {
+        for (int i = lastNonZeroIdx; i < nums.length; i++) {
             nums[i] = 0;
         }
     }
