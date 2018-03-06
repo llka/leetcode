@@ -1,0 +1,34 @@
+/*
+https://leetcode.com/problems/valid-anagram/description/
+Given two strings s and t, write a function to determine if t is an anagram of s.
+
+For example,
+s = "anagram", t = "nagaram", return true.
+s = "rat", t = "car", return false.
+*/
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        HashMap<Character, Integer> letters = new HashMap<>();
+        if(s.length() != t.length()) return false;
+        
+        for (int i = 0; i < s.length(); i++) {
+            int currLetterOccurrences = letters.getOrDefault(s.charAt(i), 0);
+            letters.put(s.charAt(i), ++currLetterOccurrences);
+        }
+        
+        for (int i = 0; i < t.length(); i++) {
+            char letter = t.charAt(i);
+            if (!letters.containsKey(letter)) {
+                return false;
+            } else {
+                int count = letters.get(letter);
+                if (count <= 0) {
+                    return false;
+                }
+                letters.put(letter, --count);
+            }
+        }
+        return true;
+    }
+}
