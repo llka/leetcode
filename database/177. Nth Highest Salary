@@ -4,8 +4,13 @@ BEGIN
     DECLARE X INT;
     SET X = N-1;
     RETURN (
-        SELECT DISTINCT Salary AS getNthHighestSalary
-        FROM Employee
-        ORDER BY Salary DESC LIMIT X, 1
+        SELECT
+            DISTINCT Salary AS getNthHighestSalary
+        FROM 
+            Employee
+        GROUP BY
+            Salary
+        ORDER BY
+            Salary DESC LIMIT X, 1
     );
 END
