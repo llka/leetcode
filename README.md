@@ -28,3 +28,12 @@ my leetcode problems solutions
 |626|[Exchange Seats](https://leetcode.com/problems/exchange-seats/) | [MySQL](./database/626.%20Exchange%20Seats)|Medium|
 |627|[Swap Salary](https://leetcode.com/problems/swap-salary/description/) | [MySQL](./database/627.%20Swap%20Salary)|Easy|
 
+#  Design
+
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|155|[Min Stack](https://leetcode.com/problems/min-stack/description/) | [Java](./design/155.%20Min%20Stack)|Easy|
+|211|[Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/description/) | [Java](./design/211.%20Add%20and%20Search%20Word%20-%20Data%20structure%20design)|Medium|
+|225|[Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/) | [Java](./design/225.%20Stack%20using%20Queues)|Easy|
+|232|[Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/) | [Java](./design/232.%20Queue%20using%20Stacks)|Easy|
+|380|[Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/) | [Python](./design/380.%20Insert%20Delete%20GetRandom%20O(1).py)|Medium|
