@@ -1,0 +1,29 @@
+# Write your MySQL query statement below
+#https://leetcode.com/problems/human-traffic-of-stadium/description/
+
+SELECT 
+    DISTINCT a.id, a.date, a.people
+FROM
+    stadium a,
+    stadium b,
+    stadium c
+WHERE
+    (   b.id = a.id - 1 AND
+        c.id = b.id - 1 AND
+        a.people >= 100 AND
+        b.people >= 100 AND
+        c.people >= 100)
+    OR(
+        a.id = c.id - 1 AND
+        b.id = a.id - 1 AND
+        a.people >= 100 AND
+        b.people >= 100 AND
+        c.people >= 100)
+    OR(
+        c.id = b.id - 1 AND
+        a.id = c.id - 1 AND
+        a.people >= 100 AND
+        b.people >= 100 AND
+        c.people >= 100)
+ORDER BY a.id
+        
