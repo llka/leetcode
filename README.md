@@ -37,3 +37,43 @@ my leetcode problems solutions
 |225|[Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/) | [Java](./design/225.%20Stack%20using%20Queues)|Easy|
 |232|[Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/) | [Java](./design/232.%20Queue%20using%20Stacks)|Easy|
 |380|[Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/) | [Python](./design/380.%20Insert%20Delete%20GetRandom%20O(1).py)|Medium|
+
+#  Dynamic Programming
+
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|70|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) | [Java](./dp/70.%20Climbing%20Stairs.txt)|Easy|
+|198|[House Robber](https://leetcode.com/problems/house-robber/description/) | [Java](./dp/198.%20House%20Robber.txt)|Easy|
+
+#  Math
+
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|149|[ Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/description/) | [Java](./math/149.%20Max%20Points%20on%20a%20Line)|Hard| 
+|171|[ Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/description/) | [Java](./math/171.%20Excel%20Sheet%20Column%20Number)|Easy| 
+|172|[ Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/description/) | [Java](./math/https://github.com/llka/leetcode/blob/master/math/172.%20Factorial%20Trailing%20Zeroes)|Easy| 
+|2|[ Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/) | [Java](./math/2.%20Add%20Two%20Numbers)|Medium| 
+|204|[ Count Primes](https://leetcode.com/problems/count-primes/description/) | [Java](./math/204.%20Count%20Primes)|Easy| 
+|224|[ Basic Calculator](https://leetcode.com/problems/basic-calculator/description/) | [Java](./math/224.%20Basic%20Calculator)|Easy| 
+|263|[ Ugly Number](https://leetcode.com/problems/ugly-number/description/) | [Java](./math/263.%20Ugly%20Number)|Easy| 
+|319|[ Bulb Switcher](https://leetcode.com/problems/bulb-switcher/description/) | [Java](./math/319.%20Bulb%20Switcher)|Medium| 
+|367|[ Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/description/) |[Py](./math/367%20Valid%20Perfect%20Square.py)|Easy| 
+|413|[ Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/) |[Py](./math/413%20Arithmetic%20Slices.py)|Easy| 
+
+|415|[ Add Strings]() | [Java](./math/)|Easy| 
+|441|[ Arranging Coins]() | [Java](./math/)|Easy| 
+|453|[ Minimum Moves to Equal Array Elements]() | [Java](./math/)|Easy| 
+|507|[ Perfect Number]() | [Java](./math/)|Easy| 
+|535|[ Encode and Decode TinyURL]() | [Java](./math/)|Easy| 
+|593|[ Valid Square]() | [Java](./math/)|Easy| 
+|598|[ Range Addition II]() | [Java](./math/)|Easy| 
+|628|[ Maximum Product of Three Numbers]() | [Java](./math/)|Easy| 
+|633|[ Sum of Square Numbers]() | [Java](./math/)|Easy| 
+|645|[ Set Mismatch]() | [Java](./math/)|Easy| 
+|66|[ Plus One]() | [Java](./math/)|Easy| 
+|67|[ Add Binary]() | [Java](./math/)|Easy| 
+|672|[ Bulb Switcher II]() | [Java](./math/)|Easy| 
+|69|[ Sqrt(x)]() | [Java](./math/)|Easy| 
+|728|[ Self Dividing Numbers]() | [Java](./math/)|Easy| 
+|754|[ Reach a Number]() | [Java](./math/)|Easy| 
+|9|[ Palindrome Number]() | [Java](./math/)|Easy| 
