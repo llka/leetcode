@@ -24,6 +24,7 @@ my leetcode problems solutions
 |197|[Rising Temperature](https://leetcode.com/problems/rising-temperature/description/) | [MySQL](./database/197.%20Rising%20Temperature)|Easy|
 |595|[Big Countries](https://leetcode.com/problems/big-countries/description/) | [MySQL](./database/595.%20Big%20Countries)|Easy|
 |596|[Classes More Than 5 Students](https://leetcode.com/problems/classes-more-than-5-students/) | [MySQL](./database/596.%20Classes%20More%20Than%205%20Students)|Easy|
+|601|[Human Traffic of Stadium](https://leetcode.com/problems/human-traffic-of-stadium/description/) | [MySQL](./database/601.%20Human%20Traffic%20of%20Stadium)|Hard|
 |620|[Not Boring Movies](https://leetcode.com/problems/not-boring-movies/description/) | [MySQL](./database/620.%20Not%20Boring%20Movies)|Easy|
 |626|[Exchange Seats](https://leetcode.com/problems/exchange-seats/) | [MySQL](./database/626.%20Exchange%20Seats)|Medium|
 |627|[Swap Salary](https://leetcode.com/problems/swap-salary/description/) | [MySQL](./database/627.%20Swap%20Salary)|Easy|
