@@ -61,9 +61,9 @@ my leetcode problems solutions
 |367|[ Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/description/) |[Py](./math/367%20Valid%20Perfect%20Square.py)|Easy| 
 |413|[ Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/) |[Py](./math/413%20Arithmetic%20Slices.py)|Easy| 
 
-|415|[ Add Strings]() | [Java](./math/)|Easy| 
-|441|[ Arranging Coins]() | [Java](./math/)|Easy| 
-|453|[ Minimum Moves to Equal Array Elements]() | [Java](./math/)|Easy| 
+|415|[ Add Strings](https://leetcode.com/problems/add-strings/description/) | [Java](./math/415.%20Add%20Strings)|Easy| 
+|441|[ Arranging Coins](https://leetcode.com/problems/arranging-coins/description/) | [Java](./math/441.%20Arranging%20Coins)|Easy| 
+|453|[ Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/) | [Java](./math/453.%20Minimum%20Moves%20to%20Equal%20Array%20Elements)|Easy| 
 |507|[ Perfect Number]() | [Java](./math/)|Easy| 
 |535|[ Encode and Decode TinyURL]() | [Java](./math/)|Easy| 
 |593|[ Valid Square]() | [Java](./math/)|Easy| 
