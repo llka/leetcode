@@ -74,17 +74,18 @@ my leetcode problems solutions
 |415|[ Add Strings](https://leetcode.com/problems/add-strings/description/) | [Java](./math/415.%20Add%20Strings)|Easy| 
 |441|[ Arranging Coins](https://leetcode.com/problems/arranging-coins/description/) | [Java](./math/441.%20Arranging%20Coins)|Easy| 
 |453|[ Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/) | [Java](./math/453.%20Minimum%20Moves%20to%20Equal%20Array%20Elements)|Easy| 
-|507|[ Perfect Number]() | [Java](./math/)|Easy| 
-|535|[ Encode and Decode TinyURL]() | [Java](./math/)|Easy| 
-|593|[ Valid Square]() | [Java](./math/)|Easy| 
-|598|[ Range Addition II]() | [Java](./math/)|Easy| 
-|628|[ Maximum Product of Three Numbers]() | [Java](./math/)|Easy| 
-|633|[ Sum of Square Numbers]() | [Java](./math/)|Easy| 
-|645|[ Set Mismatch]() | [Java](./math/)|Easy| 
-|66|[ Plus One]() | [Java](./math/)|Easy| 
-|67|[ Add Binary]() | [Java](./math/)|Easy| 
-|672|[ Bulb Switcher II]() | [Java](./math/)|Easy| 
-|69|[ Sqrt(x)]() | [Java](./math/)|Easy| 
-|728|[ Self Dividing Numbers]() | [Java](./math/)|Easy| 
-|754|[ Reach a Number]() | [Java](./math/)|Easy| 
-|9|[ Palindrome Number]() | [Java](./math/)|Easy| 
+|507|[ Perfect Number](https://leetcode.com/problems/perfect-number/description/) | [Java](./tree/507.%20Perfect%20Number)|Easy| 
+|535|[ Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/description/) | [Java](./tree/535.%20Encode%20and%20Decode%20TinyURL)|Easy| 
+
+|593|[ Valid Square]( https://leetcode.com/problems/valid-square/description/) | [Java](./tree/593.%20Valid%20Square)|Easy| 
+|598|[ Range Addition II]( https://leetcode.com/problems/range-addition-ii/description/) | [Java](./tree/598.%20Range%20Addition%20II)|Easy| 
+|628|[ Maximum Product of Three Numbers]( https://leetcode.com/problems/maximum-product-of-three-numbers/description/) | [Java](./tree/628.%20Maximum%20Product%20of%20Three%20Numbers)|Easy| 
+|633|[ Sum of Square Numbers]( https://leetcode.com/problems/sum-of-square-numbers/description/) | [Java](./tree/633.%20Sum%20of%20Square%20Numbers)|Easy| 
+|645|[ Set Mismatch]( https://leetcode.com/problems/set-mismatch/description/) | [Java](./tree/645.%20Set%20Mismatch)|Easy| 
+|66|[ Plus One]( https://leetcode.com/problems/plus-one/description/) | [Java](./tree/66.%20Plus%20One)|Easy| 
+|67|[ Add Binary]( https://leetcode.com/problems/add-binary/description/) | [Java](./tree/67.%20Add%20Binary)|Easy| 
+|672|[ Bulb Switcher II]( https://leetcode.com/problems/bulb-switcher-ii/description/) | [Java](./tree/672.%20Bulb%20Switcher%20II)|Easy| 
+|69|[ Sqrt(x)]( https://leetcode.com/problems/sqrt(x)/description/) | [Java](./tree/69.%20Sqrt(x))|Easy| 
+|728|[ Self Dividing Numbers]( https://leetcode.com/problems/self-dividing-numbers/description/) | [Java](./tree/728.%20Self%20Dividing%20Numbers)|Easy| 
+|754|[ Reach a Number]( https://leetcode.com/problems/reach-a-number/description/) | [Java](./tree/754.%20Reach%20a%20Number)|Easy| 
+|9|[ Palindrome Number]( https://leetcode.com/problems/palindrome-number/description/) | [Java](./tree/9.%20Palindrome%20Number)|Easy| 
