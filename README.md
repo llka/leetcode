@@ -8,6 +8,15 @@ my leetcode problems solutions
 |169|[Majority Element](https://leetcode.com/problems/majority-element/description/) | [Java](./array/169.%20Majority%20Element)|Easy|
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) | [Java](./array/283.%20Move%20Zeroes)|Easy|
 
+#  Tree
+
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|101|[ Symmetric Tree](https://leetcode.com/problems/symmetric-tree/description/) | [Java](./tree/%20Symmetric%20Tree)|Easy| 
+|104|[ Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) | [Java](./tree/%20Maximum%20Depth%20of%20Binary%20Tree)|Easy| 
+|530|[ Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/) | [Java](./tree/530.%20Minimum%20Absolute%20Difference%20in%20BST)|Easy| 
+|617|[ Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/) | [Java](./tree/617.%20Merge%20Two%20Binary%20Trees)|Easy| 
+
 #  Database
 
 | # | Title | Solution | Difficulty |
