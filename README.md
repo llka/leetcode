@@ -82,8 +82,8 @@ my leetcode problems solutions
 |645|[ Set Mismatch]( https://leetcode.com/problems/set-mismatch/description/) | [Java](./tree/645.%20Set%20Mismatch)|Easy| 
 |66|[ Plus One]( https://leetcode.com/problems/plus-one/description/) | [Java](./tree/66.%20Plus%20One)|Easy| 
 |67|[ Add Binary]( https://leetcode.com/problems/add-binary/description/) | [Java](./tree/67.%20Add%20Binary)|Easy| 
-|672|[ Bulb Switcher II]( https://leetcode.com/problems/bulb-switcher-ii/description/) | [Java](./tree/672.%20Bulb%20Switcher%20II)|Easy| 
-|69|[ Sqrt(x)]( https://leetcode.com/problems/sqrt(x)/description/) | [Java](./tree/69.%20Sqrt(x))|Easy| 
+|672|[ Bulb Switcher II]( https://leetcode.com/problems/bulb-switcher-ii/description/) | [Java](./tree/672.%20Bulb%20Switcher%20II)|Medium| 
+|69|[ Sqrt(x)]( https://leetcode.com/problems/sqrtx/) | [Java](./tree/69.%20Sqrt(x))|Easy| 
 |728|[ Self Dividing Numbers]( https://leetcode.com/problems/self-dividing-numbers/description/) | [Java](./tree/728.%20Self%20Dividing%20Numbers)|Easy| 
-|754|[ Reach a Number]( https://leetcode.com/problems/reach-a-number/description/) | [Java](./tree/754.%20Reach%20a%20Number)|Easy| 
+|754|[ Reach a Number]( https://leetcode.com/problems/reach-a-number/description/) | [Java](./tree/754.%20Reach%20a%20Number)|Medium| 
 |9|[ Palindrome Number]( https://leetcode.com/problems/palindrome-number/description/) | [Java](./tree/9.%20Palindrome%20Number)|Easy| 
