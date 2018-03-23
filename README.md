@@ -12,8 +12,8 @@ my leetcode problems solutions
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|101|[ Symmetric Tree](https://leetcode.com/problems/symmetric-tree/description/) | [Java](./tree/%20Symmetric%20Tree)|Easy| 
-|104|[ Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) | [Java](./tree/%20Maximum%20Depth%20of%20Binary%20Tree)|Easy| 
+|101|[ Symmetric Tree](https://leetcode.com/problems/symmetric-tree/description/) | [Java](./tree/101.%20Symmetric%20Tree)|Easy| 
+|104|[ Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) | [Java](./tree/104.%20Maximum%20Depth%20of%20Binary%20Tree)|Easy| 
 |530|[ Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/) | [Java](./tree/530.%20Minimum%20Absolute%20Difference%20in%20BST)|Easy| 
 |617|[ Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/) | [Java](./tree/617.%20Merge%20Two%20Binary%20Trees)|Easy| 
 
