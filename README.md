@@ -70,13 +70,11 @@ my leetcode problems solutions
 |319|[ Bulb Switcher](https://leetcode.com/problems/bulb-switcher/description/) | [Java](./math/319.%20Bulb%20Switcher)|Medium| 
 |367|[ Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/description/) |[Py](./math/367%20Valid%20Perfect%20Square.py)|Easy| 
 |413|[ Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/) |[Py](./math/413%20Arithmetic%20Slices.py)|Easy| 
-
 |415|[ Add Strings](https://leetcode.com/problems/add-strings/description/) | [Java](./math/415.%20Add%20Strings)|Easy| 
 |441|[ Arranging Coins](https://leetcode.com/problems/arranging-coins/description/) | [Java](./math/441.%20Arranging%20Coins)|Easy| 
 |453|[ Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/) | [Java](./math/453.%20Minimum%20Moves%20to%20Equal%20Array%20Elements)|Easy| 
 |507|[ Perfect Number](https://leetcode.com/problems/perfect-number/description/) | [Java](./tree/507.%20Perfect%20Number)|Easy| 
 |535|[ Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/description/) | [Java](./tree/535.%20Encode%20and%20Decode%20TinyURL)|Easy| 
-
 |593|[ Valid Square]( https://leetcode.com/problems/valid-square/description/) | [Java](./tree/593.%20Valid%20Square)|Easy| 
 |598|[ Range Addition II]( https://leetcode.com/problems/range-addition-ii/description/) | [Java](./tree/598.%20Range%20Addition%20II)|Easy| 
 |628|[ Maximum Product of Three Numbers]( https://leetcode.com/problems/maximum-product-of-three-numbers/description/) | [Java](./tree/628.%20Maximum%20Product%20of%20Three%20Numbers)|Easy| 
