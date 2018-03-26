@@ -1,0 +1,16 @@
+class Solution {
+    private String[] morzeLetters = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+
+    public int uniqueMorseRepresentations(String[] words) {
+        Set<String> transformations = new HashSet<>();
+        for (int i = 0; i < words.length; i++) {
+            StringBuilder transformation = new StringBuilder();
+            for (int j = 0; j < words[i].length(); j++) {
+                int num = (int) words[i].charAt(j) - 97;
+                transformation.append(morzeLetters[num]);
+            }
+            transformations.add(transformation.toString());
+        }
+        return transformations.size();
+    }
+}
