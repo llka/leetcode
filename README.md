@@ -88,3 +88,10 @@ my leetcode problems solutions
 |728|[ Self Dividing Numbers]( https://leetcode.com/problems/self-dividing-numbers/description/) | [Java](./tree/728.%20Self%20Dividing%20Numbers)|Easy| 
 |754|[ Reach a Number]( https://leetcode.com/problems/reach-a-number/description/) | [Java](./tree/754.%20Reach%20a%20Number)|Medium| 
 |9|[ Palindrome Number]( https://leetcode.com/problems/palindrome-number/description/) | [Java](./tree/9.%20Palindrome%20Number)|Easy| 
+
+#  Without Tag
+
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|804|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/) | [Java](./804.%20Unique%20Morse%20Code%20Words)|Easy|
+
