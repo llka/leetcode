@@ -1,0 +1,15 @@
+class Solution {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        List<Integer> disappeared = new ArrayList<>();
+        boolean[] appeared = new boolean[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            appeared[nums[i] - 1] = true;
+        }
+        for (int i = 0; i < appeared.length; i++) {
+            if (!appeared[i]) {
+                disappeared.add(i + 1);
+            }
+        }
+        return disappeared;
+    }
+}
