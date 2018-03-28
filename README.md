@@ -7,6 +7,7 @@ my leetcode problems solutions
 |---| ----- | -------- | ---------- |
 |169|[Majority Element](https://leetcode.com/problems/majority-element/description/) | [Java](./array/169.%20Majority%20Element)|Easy|
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) | [Java](./array/283.%20Move%20Zeroes)|Easy|
+|448|[ Find All Numbers Disappeared in an Array]( https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | [Java](./tree/448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array)|Easy|
 
 #  Tree
 
@@ -16,6 +17,7 @@ my leetcode problems solutions
 |104|[ Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) | [Java](./tree/104.%20Maximum%20Depth%20of%20Binary%20Tree)|Easy| 
 |226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/) | [Java](./tree/226.%20Invert%20Binary%20Tree)|Easy| 
 |530|[ Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/) | [Java](./tree/530.%20Minimum%20Absolute%20Difference%20in%20BST)|Easy| 
+|538|[ Convert BST to Greater Tree]( https://leetcode.com/problems/convert-bst-to-greater-tree/description/) | [Java](./tree/538.%20Convert%20BST%20to%20Greater%20Tree)|Easy| 
 |617|[ Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/) | [Java](./tree/617.%20Merge%20Two%20Binary%20Trees)|Easy| 
 
 #  Database
@@ -93,5 +95,15 @@ my leetcode problems solutions
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|1|[ Two Sum]( https://leetcode.com/problems/two-sum/description/) | [Java](./tree/1.%20Two%20Sum)|Easy| 
+|21|[ Merge Two Sorted Lists]( https://leetcode.com/problems/merge-two-sorted-lists/description/) | [Java](./tree/21.%20Merge%20Two%20Sorted%20Lists)|Easy| 
+|242|[ Valid Anagram]( https://leetcode.com/problems/valid-anagram/description/) | [Java](./tree/242.%20Valid%20Anagram)|Easy| 
+|258|[ Add Digits]( https://leetcode.com/problems/add-digits/description/) | [Java](./tree/258.%20Add%20Digits)|Easy| 
+|268|[ Missing Number]( https://leetcode.com/problems/missing-number/description/) | [Java](./tree/268.%20Missing%20Number)|Easy| 
+|387|[ First Unique Character in a String]( https://leetcode.com/problems/first-unique-character-in-a-string/description/) | [Java](./tree/387.%20First%20Unique%20Character%20in%20a%20String)|Easy| 
+|461|[ Hamming Distance]( https://leetcode.com/problems/hamming-distance/description/) | [Java](./tree/461.%20Hamming%20Distance)|Easy| 
+|476|[ Number Complement]( https://leetcode.com/problems/number-complement/description/) | [Java](./tree/476.%20Number%20Complement)|Easy| 
+|7|[ Reverse Integer]( https://leetcode.com/problems/reverse-integer/description/) | [Java](./tree/7.%20Reverse%20Integer)|Easy| 
+|88|[ Merge Sorted Array]( https://leetcode.com/problems/merge-sorted-array/description/) | [Java](./tree/88.%20Merge%20Sorted%20Array)|Easy|
 |804|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/) | [Java](./804.%20Unique%20Morse%20Code%20Words)|Easy|
 
