@@ -1,3 +1,31 @@
+/* without extra space and in O(n) runtime */
+class Solution {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        List<Integer> disappeared = new ArrayList<>();
+        int absIndex;
+        for (int i = 0; i < nums.length; i++) {
+            absIndex = Math.abs(nums[i]) - 1;
+            if (nums[absIndex] > 0) {
+                nums[absIndex] = -Math.abs(nums[absIndex]);
+            } else {
+                /* Math.abs(nums[absIndex]) is duplicated */
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                /*index = |nums[i]| wasn't  visited, consequently there is no corresponding number in nums array */
+                disappeared.add(i + 1);
+                /*we visited index = |nums[i]| */
+            } else {
+                /*we visited index = |nums[i]| */
+            }
+        }
+        return disappeared;
+    }
+}
+
+/* with extra cpace, but faster */
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> disappeared = new ArrayList<>();
