@@ -7,7 +7,7 @@ my leetcode problems solutions
 |---| ----- | -------- | ---------- |
 |169|[Majority Element](https://leetcode.com/problems/majority-element/description/) | [Java](./array/169.%20Majority%20Element)|Easy|
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) | [Java](./array/283.%20Move%20Zeroes)|Easy|
-|448|[ Find All Numbers Disappeared in an Array]( https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | [Java](./tree/448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array)|Easy|
+|448|[ Find All Numbers Disappeared in an Array]( https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | [Java](./array/448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array)|Easy| 
 
 #  Tree
 
@@ -76,34 +76,35 @@ my leetcode problems solutions
 |415|[ Add Strings](https://leetcode.com/problems/add-strings/description/) | [Java](./math/415.%20Add%20Strings)|Easy| 
 |441|[ Arranging Coins](https://leetcode.com/problems/arranging-coins/description/) | [Java](./math/441.%20Arranging%20Coins)|Easy| 
 |453|[ Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/) | [Java](./math/453.%20Minimum%20Moves%20to%20Equal%20Array%20Elements)|Easy| 
-|507|[ Perfect Number](https://leetcode.com/problems/perfect-number/description/) | [Java](./tree/507.%20Perfect%20Number)|Easy| 
-|535|[ Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/description/) | [Java](./tree/535.%20Encode%20and%20Decode%20TinyURL)|Easy| 
-|593|[ Valid Square]( https://leetcode.com/problems/valid-square/description/) | [Java](./tree/593.%20Valid%20Square)|Easy| 
-|598|[ Range Addition II]( https://leetcode.com/problems/range-addition-ii/description/) | [Java](./tree/598.%20Range%20Addition%20II)|Easy| 
-|628|[ Maximum Product of Three Numbers]( https://leetcode.com/problems/maximum-product-of-three-numbers/description/) | [Java](./tree/628.%20Maximum%20Product%20of%20Three%20Numbers)|Easy| 
-|633|[ Sum of Square Numbers]( https://leetcode.com/problems/sum-of-square-numbers/description/) | [Java](./tree/633.%20Sum%20of%20Square%20Numbers)|Easy| 
-|645|[ Set Mismatch]( https://leetcode.com/problems/set-mismatch/description/) | [Java](./tree/645.%20Set%20Mismatch)|Easy| 
-|66|[ Plus One]( https://leetcode.com/problems/plus-one/description/) | [Java](./tree/66.%20Plus%20One)|Easy| 
-|67|[ Add Binary]( https://leetcode.com/problems/add-binary/description/) | [Java](./tree/67.%20Add%20Binary)|Easy| 
-|672|[ Bulb Switcher II]( https://leetcode.com/problems/bulb-switcher-ii/description/) | [Java](./tree/672.%20Bulb%20Switcher%20II)|Medium| 
-|69|[ Sqrt(x)]( https://leetcode.com/problems/sqrtx/) | [Java](./tree/69.%20Sqrt(x))|Easy| 
-|728|[ Self Dividing Numbers]( https://leetcode.com/problems/self-dividing-numbers/description/) | [Java](./tree/728.%20Self%20Dividing%20Numbers)|Easy| 
-|754|[ Reach a Number]( https://leetcode.com/problems/reach-a-number/description/) | [Java](./tree/754.%20Reach%20a%20Number)|Medium| 
-|9|[ Palindrome Number]( https://leetcode.com/problems/palindrome-number/description/) | [Java](./tree/9.%20Palindrome%20Number)|Easy| 
+|507|[ Perfect Number]( https://leetcode.com/problems/perfect-number/description/) | [Java](./math/507.%20Perfect%20Number)|Easy| 
+|535|[ Encode and Decode TinyURL]( https://leetcode.com/problems/encode-and-decode-tinyurl/description/) | [Java](./math/535.%20Encode%20and%20Decode%20TinyURL)|Easy| 
+|593|[ Valid Square]( https://leetcode.com/problems/valid-square/description/) | [Java](./math/593.%20Valid%20Square)|Easy| 
+|598|[ Range Addition II]( https://leetcode.com/problems/range-addition-ii/description/) | [Java](./math/598.%20Range%20Addition%20II)|Easy| 
+|628|[ Maximum Product of Three Numbers]( https://leetcode.com/problems/maximum-product-of-three-numbers/description/) | [Java](./math/628.%20Maximum%20Product%20of%20Three%20Numbers)|Easy| 
+|633|[ Sum of Square Numbers]( https://leetcode.com/problems/sum-of-square-numbers/description/) | [Java](./math/633.%20Sum%20of%20Square%20Numbers)|Easy| 
+|645|[ Set Mismatch]( https://leetcode.com/problems/set-mismatch/description/) | [Java](./math/645.%20Set%20Mismatch)|Easy| 
+|66|[ Plus One]( https://leetcode.com/problems/plus-one/description/) | [Java](./math/66.%20Plus%20One)|Easy| 
+|67|[ Add Binary]( https://leetcode.com/problems/add-binary/description/) | [Java](./math/67.%20Add%20Binary)|Easy| 
+|672|[ Bulb Switcher II]( https://leetcode.com/problems/bulb-switcher-ii/description/) | [Java](./math/672.%20Bulb%20Switcher%20II)|Medium| 
+|69|[ Sqrt(x)]( https://leetcode.com/problems/sqrtx/description/) | [Java](./math/69.%20Sqrt(x))|Easy| 
+|728|[ Self Dividing Numbers]( https://leetcode.com/problems/self-dividing-numbers/description/) | [Java](./math/728.%20Self%20Dividing%20Numbers)|Easy| 
+|754|[ Reach a Number]( https://leetcode.com/problems/reach-a-number/description/) | [Java](./math/754.%20Reach%20a%20Number)|Medium| 
+|9|[ Palindrome Number]( https://leetcode.com/problems/palindrome-number/description/) | [Java](./math/9.%20Palindrome%20Number)|Easy| 
+|587|[ Erect the Fence]( https://leetcode.com/problems/erect-the-fence/description/) | [Java](./geometry/587.%20Erect%20the%20Fence)|Hard| 
 
 #  Without Tag
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|1|[ Two Sum]( https://leetcode.com/problems/two-sum/description/) | [Java](./tree/1.%20Two%20Sum)|Easy| 
-|21|[ Merge Two Sorted Lists]( https://leetcode.com/problems/merge-two-sorted-lists/description/) | [Java](./tree/21.%20Merge%20Two%20Sorted%20Lists)|Easy| 
-|242|[ Valid Anagram]( https://leetcode.com/problems/valid-anagram/description/) | [Java](./tree/242.%20Valid%20Anagram)|Easy| 
-|258|[ Add Digits]( https://leetcode.com/problems/add-digits/description/) | [Java](./tree/258.%20Add%20Digits)|Easy| 
-|268|[ Missing Number]( https://leetcode.com/problems/missing-number/description/) | [Java](./tree/268.%20Missing%20Number)|Easy| 
-|387|[ First Unique Character in a String]( https://leetcode.com/problems/first-unique-character-in-a-string/description/) | [Java](./tree/387.%20First%20Unique%20Character%20in%20a%20String)|Easy| 
-|461|[ Hamming Distance]( https://leetcode.com/problems/hamming-distance/description/) | [Java](./tree/461.%20Hamming%20Distance)|Easy| 
-|476|[ Number Complement]( https://leetcode.com/problems/number-complement/description/) | [Java](./tree/476.%20Number%20Complement)|Easy| 
-|7|[ Reverse Integer]( https://leetcode.com/problems/reverse-integer/description/) | [Java](./tree/7.%20Reverse%20Integer)|Easy| 
-|88|[ Merge Sorted Array]( https://leetcode.com/problems/merge-sorted-array/description/) | [Java](./tree/88.%20Merge%20Sorted%20Array)|Easy|
+|1|[ Two Sum]( https://leetcode.com/problems/two-sum/description/) | [Java](./1.%20Two%20Sum)|Easy| 
+|21|[ Merge Two Sorted Lists]( https://leetcode.com/problems/merge-two-sorted-lists/description/) | [Java](./21.%20Merge%20Two%20Sorted%20Lists)|Easy| 
+|242|[ Valid Anagram]( https://leetcode.com/problems/valid-anagram/description/) | [Java](./242.%20Valid%20Anagram)|Easy| 
+|258|[ Add Digits]( https://leetcode.com/problems/add-digits/description/) | [Java](./258.%20Add%20Digits)|Easy| 
+|268|[ Missing Number]( https://leetcode.com/problems/missing-number/description/) | [Java](./268.%20Missing%20Number)|Easy| 
+|387|[ First Unique Character in a String]( https://leetcode.com/problems/first-unique-character-in-a-string/description/) | [Java](./387.%20First%20Unique%20Character%20in%20a%20String)|Easy| 
+|461|[ Hamming Distance]( https://leetcode.com/problems/hamming-distance/description/) | [Java](./461.%20Hamming%20Distance)|Easy| 
+|476|[ Number Complement]( https://leetcode.com/problems/number-complement/description/) | [Java](./476.%20Number%20Complement)|Easy| 
+|7|[ Reverse Integer]( https://leetcode.com/problems/reverse-integer/description/) | [Java](./7.%20Reverse%20Integer)|Easy| 
+|88|[ Merge Sorted Array]( https://leetcode.com/problems/merge-sorted-array/description/) | [Java](./88.%20Merge%20Sorted%20Array)|Easy| 
 |804|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/) | [Java](./804.%20Unique%20Morse%20Code%20Words)|Easy|
 
