@@ -1,0 +1,70 @@
+class Solution {
+   
+    public int maxProfit(int[] prices) {
+        int maxDifference = 0;
+        int minPrice = 999999;
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < minPrice) {
+                minPrice = prices[i];
+            } else {
+                maxDifference = Math.max(prices[i] - minPrice, maxDifference);
+            }
+        }
+        return maxDifference;
+    }
+}
+
+
+class Solution {
+    static class Price {
+        int value;
+        int date;
+
+        public Price(int value, int date) {
+            this.value = value;
+            this.date = date;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Price price = (Price) o;
+            return value == price.value &&
+                    date == price.date;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(value, date);
+        }
+    }
+
+    public int maxProfit(int[] prices) {
+        Price[] pricesAndDates = new Price[prices.length];
+        boolean decreasingSeq = true;
+        int decreasingSeqEndIdx = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (decreasingSeq && i > 0) {
+                if (prices[i] > prices[i - 1]) {
+                    decreasingSeq = false;
+                    decreasingSeqEndIdx = i - 1;
+                }
+            }
+            pricesAndDates[i] = new Price(prices[i], i);
+        }
+        int maxDifference = 0;
+        for (int i = decreasingSeqEndIdx; i < prices.length; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
+                if (pricesAndDates[j].date > pricesAndDates[i].date) {
+                    int diff = pricesAndDates[j].value - pricesAndDates[i].value;
+                    if (diff > maxDifference) {
+                        maxDifference = diff;
+                    }
+                }
+            }
+        }
+        return maxDifference;
+    }
+}
