@@ -1,0 +1,50 @@
+/*
+1.
+dp - currentSum
+*/
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int size = nums.length;
+        int maxSum = nums[0];
+        int currentSum = 0;
+        
+        for (int i = 0; i < size; i++) {
+            currentSum = Math.max(currentSum, 0) + nums[i];
+            
+            if(currentSum > maxSum){
+                maxSum = currentSum;
+            }
+        }
+        
+        return maxSum;
+    }
+}
+
+/*
+2.
+dp - матрица, по диагонали стоят эл-ты массива.
+*/
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int size = nums.length;
+        int dp[][] = new int[size][size];
+        int maxSum = nums[0];
+
+        for (int i = 0; i < size; i++) {
+            dp[i][i] = nums[i];
+            if(nums[i] > maxSum){
+                maxSum = nums[i];
+            }
+        }
+        
+        for (int k = 1; k < size; k++) {
+            for (int i = 0; i < size - k; i++) {
+                int j = k + i;
+                dp[i][j] = dp[i][j - 1] + dp[i + 1][j] - dp[i + 1][j - 1];
+                maxSum = Math.max(maxSum, dp[i][j]);
+            }
+        }
+        return maxSum;
+    }
+}
