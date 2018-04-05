@@ -1,0 +1,18 @@
+class Solution {
+    public int findUnsortedSubarray(int[] nums) {
+        int[] sortedNums = new int[nums.length];
+        System.arraycopy(nums, 0, sortedNums, 0, nums.length);
+        Arrays.sort(sortedNums);
+
+        int startIdx = -1;
+        int endIdx = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != sortedNums[i]) {
+                if (startIdx < 0) startIdx = i;
+                endIdx = i;
+            }
+        }
+
+        return startIdx < 0 ? 0 : endIdx - startIdx + 1;
+    }
+}
