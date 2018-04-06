@@ -9,6 +9,7 @@ my leetcode problems solutions
 |169|[Majority Element](https://leetcode.com/problems/majority-element/description/) | [Java](./array/169.%20Majority%20Element)|Easy|
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) | [Java](./array/283.%20Move%20Zeroes)|Easy|
 |448|[ Find All Numbers Disappeared in an Array]( https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | [Java](./array/448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array)|Easy| 
+|581|[ Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/) | [Java](./array/581.%20Shortest%20Unsorted%20Continuous%20Subarray)|Easy| 
 
 #  Tree
 
