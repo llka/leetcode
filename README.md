@@ -101,6 +101,8 @@ my leetcode problems solutions
 |---| ----- | -------- | ---------- |
 |1|[ Two Sum]( https://leetcode.com/problems/two-sum/description/) | [Java](./1.%20Two%20Sum)|Easy| 
 |21|[ Merge Two Sorted Lists]( https://leetcode.com/problems/merge-two-sorted-lists/description/) | [Java](./21.%20Merge%20Two%20Sorted%20Lists)|Easy| 
+|141|[ Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/) | [Java](./141.%20Linked%20List%20Cycle)|Easy| 
+|160|[ Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/description/) | [Java](./160.%20Intersection%20of%20Two%20Linked%20Lists)|Easy| 
 |242|[ Valid Anagram]( https://leetcode.com/problems/valid-anagram/description/) | [Java](./242.%20Valid%20Anagram)|Easy| 
 |258|[ Add Digits]( https://leetcode.com/problems/add-digits/description/) | [Java](./258.%20Add%20Digits)|Easy| 
 |268|[ Missing Number]( https://leetcode.com/problems/missing-number/description/) | [Java](./268.%20Missing%20Number)|Easy| 
@@ -110,4 +112,5 @@ my leetcode problems solutions
 |7|[ Reverse Integer]( https://leetcode.com/problems/reverse-integer/description/) | [Java](./7.%20Reverse%20Integer)|Easy| 
 |88|[ Merge Sorted Array]( https://leetcode.com/problems/merge-sorted-array/description/) | [Java](./88.%20Merge%20Sorted%20Array)|Easy| 
 |804|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/) | [Java](./804.%20Unique%20Morse%20Code%20Words)|Easy|
+
 
