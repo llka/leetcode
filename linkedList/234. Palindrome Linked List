@@ -1,0 +1,110 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ odd
+ */
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        if (head == null || head.next == null) return true;
+
+        ListNode headCopy = new ListNode(head.val);
+        headCopy.next = head.next;
+        boolean palindromeEven = isPalindromeEven(head);
+        boolean palindromeOdd = isPalindromeOdd(headCopy);
+
+        return palindromeOdd || palindromeEven;
+    }
+
+    // чётный 1-2-2-1
+    private boolean isPalindromeEven(ListNode head) {
+        ListNode lhs = null;
+        ListNode current = head;
+        ListNode rhs = head.next;
+
+        boolean palindromeEven = false;
+
+        while (rhs != null) {
+            if (palindromeEven) {
+                if (rhs.next == null && lhs == null) {
+                    return true;
+                } else if (rhs.next == null && lhs != null || rhs.next != null && lhs == null) {
+                    return false;
+                } else if (lhs.val == rhs.next.val) {
+                    lhs = lhs.next;
+                    rhs = rhs.next;
+                } else {
+                    return false;
+                }
+            } else {
+                if (current.val == rhs.val) {
+                    palindromeEven = true;
+                } else {
+                    //реверс
+                    if (lhs == null) {
+                        lhs = current;
+                        lhs.next = null;
+                        ListNode tempRhs = new ListNode(rhs.val);
+                        current = tempRhs;
+                        current.next = lhs;
+                    } else {
+                        lhs = current;
+                        ListNode tempRhs = new ListNode(rhs.val);
+                        current = tempRhs;
+                        current.next = lhs;
+                    }
+                    rhs = rhs.next;
+                }
+            }
+        }
+        return palindromeEven;
+    }
+
+    // нечётный 1-2-2-2-1
+    private boolean isPalindromeOdd(ListNode head) {
+        ListNode lhs = null;
+        ListNode current = head;
+        ListNode rhs = head.next;
+
+        boolean palindromeOdd = false;
+
+        while (rhs != null) {
+
+            if (palindromeOdd) {
+                if (rhs.next == null && lhs.next == null) {
+                    return true;
+                } else if (rhs.next == null && lhs.next != null || rhs.next != null && lhs.next == null) {
+                    return false;
+                } else if (lhs.next.val == rhs.next.val) {
+                    lhs = lhs.next;
+                    rhs = rhs.next;
+                } else {
+                    return false;
+                }
+            } else {
+                if (lhs != null && lhs.val == rhs.val) {
+                    palindromeOdd = true;
+                } else {
+                    //реверс
+                    if (lhs == null) {
+                        lhs = current;
+                        lhs.next = null;
+                        ListNode tempRhs = new ListNode(rhs.val);
+                        current = tempRhs;
+                        current.next = lhs;
+                    } else {
+                        lhs = current;
+                        ListNode tempRhs = new ListNode(rhs.val);
+                        current = tempRhs;
+                        current.next = lhs;
+                    }
+                    rhs = rhs.next;
+                }
+            }
+        }
+        return palindromeOdd;
+    }
+}
