@@ -10,6 +10,8 @@ my leetcode problems solutions
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) | [Java](./array/283.%20Move%20Zeroes)|Easy|
 |448|[ Find All Numbers Disappeared in an Array]( https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | [Java](./array/448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array)|Easy| 
 |581|[ Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/) | [Java](./array/581.%20Shortest%20Unsorted%20Continuous%20Subarray)|Easy| 
+|832|[ Flipping an Image](https://leetcode.com/problems/flipping-an-image/description/) | [Java](./array/832.%20Flipping%20an%20Image)|Easy| 
+|868|[ Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/) | [Java](./array/868.%20Transpose%20Matrix)|Easy| 
 
 #  Linked List
 
