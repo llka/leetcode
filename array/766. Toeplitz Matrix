@@ -1,0 +1,34 @@
+public class Solution {
+    public boolean isToeplitzMatrix(int[][] matrix) {
+        // верхний треугольник
+        for (int i = matrix[0].length - 1; i >= 0; i--) {
+            int y = 0;
+            int x = i;
+            int current = matrix[y][x];
+            int nextDiagonal = current;
+            while (y + 1 < matrix.length && x + 1 < matrix[y + 1].length) {
+                current = nextDiagonal;
+                nextDiagonal = matrix[++y][++x];
+                if (current != nextDiagonal) {
+                    return false;
+                }
+            }
+
+        }
+        //нижний треугольник
+        for (int i = 1; i < matrix.length; i++) {
+            int y = i;
+            int x = 0;
+            int current = matrix[y][x];
+            int nextDiagonal = current;
+            while (y + 1 < matrix.length && x + 1 < matrix[y + 1].length) {
+                current = nextDiagonal;
+                nextDiagonal = matrix[++y][++x];
+                if (current != nextDiagonal) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
