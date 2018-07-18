@@ -1,0 +1,29 @@
+class Solution {
+    public List<Integer> findDuplicates(int[] nums) {
+        final int BIG = 100000;
+        ArrayList<Integer> duplicates = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            int current = nums[i] - 1;
+            if (current < BIG) {
+                nums[current] += BIG;
+            } else {
+                nums[current % BIG] += BIG;
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] >= BIG * 2) {
+                duplicates.add(i + 1);
+            }
+        }
+        return duplicates;
+    }
+}
+/*
+Видишь число 2, берешь и прибавляешь к индексу два большое число-константу > N. Например, 10000000.
+При этом надо ячейку проверять > N или нет. Если меньше, то ячейка еще не тронута. Берем его и тоже по индексу где-то прибавляем.
+Если больше, берем по модулю это большое число.
+Если были повторения, то будет 2 * 1000000 + k.
+Это на какой-то позиции в массиве J.
+Значит, j повторялась дважды.
+*/
