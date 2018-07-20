@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isOneBitCharacter(int[] bits) {
+        int ones = 0;
+        int i = bits.length - 2;
+
+        while (i > -1 && bits[i] == 1) {
+            ones++;
+            i--;
+        }
+
+        return ones % 2 == 0;
+    }
+}
+
+1,1,...1,0,..._count_ones_...,0
+count_ones = 2i + 1 => last is two bit   - 10 
