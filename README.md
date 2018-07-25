@@ -7,12 +7,17 @@ my leetcode problems solutions
 |---| ----- | -------- | ---------- |
 |121|[ Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) | [Java](./array/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock)|Easy| 
 |169|[ Majority Element](https://leetcode.com/problems/majority-element/description/) | [Java](./array/169.%20Majority%20Element)|Easy| 
+|217|[ Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/) | [Java](./array/217.%20Contains%20Duplicate)|Easy| 
+|238|[ Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/) | [Java](./array/238.%20Product%20of%20Array%20Except%20Self)|Easy| 
 |283|[ Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) | [Java](./array/283.%20Move%20Zeroes)|Easy| 
-|442|[ Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/description/) | [Java](./array/442.%20Find%20All%20Duplicates%20in%20an%20Array)|Medium| 
+|442|[ Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/description/) | [Java](./array/442.%20Find%20All%20Duplicates%20in%20an%20Array)|Easy| 
 |448|[ Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | [Java](./array/448.%20Find%20All%20Numbers%20Disappeared%20in%20an%20Array)|Easy| 
+|485|[ Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/description/) | [Java](./array/485.%20Max%20Consecutive%20Ones)|Easy| 
 |561|[ Array Partition I](https://leetcode.com/problems/array-partition-i/description/) | [Java](./array/561.%20Array%20Partition%20I)|Easy| 
 |566|[ Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/description/) | [Java](./array/566.%20Reshape%20the%20Matrix)|Easy| 
 |581|[ Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/) | [Java](./array/581.%20Shortest%20Unsorted%20Continuous%20Subarray)|Easy| 
+|695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/) | [Java](./array/695.%20Max%20Area%20of%20Island)|Medium| 
+|717|[ 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/description/) | [Java](./array/717.%201-bit%20and%202-bit%20Characters)|Easy| 
 |766|[ Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/description/) | [Java](./array/766.%20Toeplitz%20Matrix)|Easy| 
 |832|[ Flipping an Image](https://leetcode.com/problems/flipping-an-image/description/) | [Java](./array/832.%20Flipping%20an%20Image)|Easy| 
 |868|[ Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/) | [Java](./array/868.%20Transpose%20Matrix)|Easy| 
