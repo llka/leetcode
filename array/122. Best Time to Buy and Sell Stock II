@@ -1,0 +1,83 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        final int NOT_SET = -1000;
+        int n = prices.length;
+        boolean decreasing = false;
+        boolean increasing = false;
+        int buy = NOT_SET;
+        int sell = NOT_SET;
+        int profit = 0;
+        for (int i = 1; i < n; i++) {
+            if (decreasing) {
+                if (prices[i - 1] > prices[i]) {
+                    decreasing = true;
+                    increasing = false;
+                } else if (prices[i - 1] < prices[i]) {
+                    decreasing = false;
+                    increasing = true;
+
+                    buy = prices[i - 1];
+
+                    if (i == n - 1 && buy != NOT_SET) {
+                        sell = prices[i];
+                        profit += sell - buy;
+                        sell = NOT_SET;
+                        buy = NOT_SET;
+                    }
+                } else {
+                }
+            } else if (increasing) {
+                if (prices[i - 1] > prices[i]) {
+                    decreasing = true;
+                    increasing = false;
+                    sell = prices[i - 1];
+                    profit += sell - buy;
+                    sell = NOT_SET;
+                    buy = NOT_SET;
+                } else if (prices[i - 1] < prices[i]) {
+                    decreasing = false;
+                    increasing = true;
+                    if (i == n - 1 && buy != NOT_SET) {
+                        sell = prices[i];
+                        profit += sell - buy;
+                        sell = NOT_SET;
+                        buy = NOT_SET;
+                    }
+                } else {
+                    if (i == n - 1 && buy != NOT_SET) {
+                        sell = prices[i];
+                        profit += sell - buy;
+                        sell = NOT_SET;
+                        buy = NOT_SET;
+                    }
+                }
+
+            } else {
+                if (prices[i - 1] > prices[i]) {
+                    decreasing = true;
+                    increasing = false;
+                    if(buy != NOT_SET){
+                        sell = prices[i];
+                        profit += sell - buy;
+                        sell = NOT_SET;
+                        buy = NOT_SET;
+                    }
+                } else if (prices[i - 1] < prices[i]) {
+                    decreasing = false;
+                    increasing = true;
+                    buy = prices[i - 1];
+                    if (i == n - 1 && buy != NOT_SET) {
+                        sell = prices[i];
+                        profit += sell - buy;
+                        sell = NOT_SET;
+                        buy = NOT_SET;
+                    }
+                } else {
+                    decreasing = false;
+                    increasing = false;
+                }
+            }
+        }
+        return profit;
+    }
+}
