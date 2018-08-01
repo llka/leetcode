@@ -1,0 +1,51 @@
+public class Solution {
+    private static final Logger logger = LogManager.getLogger(Solution.class);
+
+
+    public int removeDuplicates(int[] nums) {
+
+        int link = 99999;
+        int end = -(nums.length + link);
+
+        int next = 1;
+        for (int i = 0; i < nums.length; i += next) {
+            if (i < nums.length - 1 && i + next < nums.length) {
+                while (nums[i] == nums[i + next]) {
+                    next++;
+                    if (i + next == nums.length) {
+                        nums[i + 1] = end;
+                        i = nums.length;
+                        break;
+                    }
+                }
+                if (next != 1 && i < nums.length - 1) {
+                    int nextDifferentNumIndex = - i - next - link;
+                    nums[i + 1] = nextDifferentNumIndex;
+                    next = 1;
+                }
+            }
+        }
+
+        int uniqueIndex = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < -link) {
+                int nextIdx = -nums[i] - link;
+                if (nextIdx < nums.length) {
+                    nums[uniqueIndex] = nums[nextIdx];
+                } else {
+                    break;
+                }
+                uniqueIndex++;
+                i = nextIdx;
+            } else {
+                nums[uniqueIndex] = nums[i];
+                uniqueIndex++;
+            }
+        }
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println(nums[i]);
+        }
+        return uniqueIndex;
+    }
+
+}
