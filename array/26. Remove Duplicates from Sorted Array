@@ -1,7 +1,6 @@
 public class Solution {
     private static final Logger logger = LogManager.getLogger(Solution.class);
 
-
     public int removeDuplicates(int[] nums) {
 
         int link = 99999;
