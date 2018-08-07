@@ -1,0 +1,79 @@
+class Solution {
+    public List<List<Integer>> subsets(int[] nums) {
+        int n = (int) Math.pow(2, nums.length);
+        List<List<Integer>> sets = new ArrayList<>(n);
+        for (int i = 0; i < n; i++) {
+            ArrayList<Integer> binary = representInBinary(i);
+            List<Integer> subset = new ArrayList<>();
+            for (int j = 0; j < binary.size(); j++) {
+                if (binary.get(j) == 1) {
+                    subset.add(nums[j]);
+                }
+            }
+            sets.add(subset);
+        }
+        return sets;
+    }
+
+    private ArrayList<Integer> representInBinary(int num) {
+        ArrayList<Integer> binary = new ArrayList<>();
+        //logger.warn("num " + num);
+        while (num > 0) {
+            int r = num % 2;
+            binary.add(r);
+            num = num / 2;
+        }
+        //Collections.reverse(binary);
+        //logger.warn(binary);
+        return binary;
+    }
+}
+
+---------------------------------
+FASTER - the same in one function
+---------------------------------
+
+class Solution {
+    public List<List<Integer>> subsets(int[] nums) {
+        int n = (int) Math.pow(2, nums.length);
+        List<List<Integer>> sets = new ArrayList<>(n);
+        for (int i = 0; i < n; i++) {
+            List<Integer> subset = new ArrayList<>();
+            int index = 0;
+            int num = i;
+            while (num > 0) {
+                int r = num % 2;
+                if (r == 1) {
+                    subset.add(nums[index]);
+                }
+                index++;
+                num = num / 2;
+            }
+            sets.add(subset);
+        }
+        return sets;
+    }
+}
+
+
+/*
+1) for a set of n elements, get the value of 2^n. There will be 2^n no.of subsets. (2^n because each element can be either present(1) or absent(0). So for n elements there will be 2^n subsets. )
+Eg. for 3 elements, say {a,b,c}, there will be 2^3=8 subsets
+
+2) Get a binary representation of 2^n.
+Eg. 8 in binary is 1000
+
+3) Go from 0 to (2^n - 1). In each iteration, for each 1 in the binary representation, form a subset with elements that correspond to the index of that 1 in the binary representation.
+
+Eg:
+
+For the elements {a, b, c}
+000 will give    {}
+001 will give    {c}
+010 will give    {b}
+011 will give    {b, c}
+100 will give    {a}
+101 will give    {a, c}
+110 will give    {a, b}
+111 will give    {a, b, c}
+*/
