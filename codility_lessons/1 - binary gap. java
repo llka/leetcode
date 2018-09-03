@@ -1,12 +1,12 @@
 
 public int solution(int N) {
-        List<Integer> binaryN = representAsBinary(N);
-        logger.info(binaryN);
-
         int current = 0;
         boolean count = false;
         int maxGap = 0;
-        for (Integer digit : binaryN) {
+
+        while (N > 0) {
+            int digit = N % 2;
+            N /= 2;
             if (digit == 1 && count == false) {
                 count = true;
             } else if (digit == 1 && count == true) {
@@ -16,7 +16,6 @@ public int solution(int N) {
                 current++;
             }
         }
-
         return maxGap;
     }
 
