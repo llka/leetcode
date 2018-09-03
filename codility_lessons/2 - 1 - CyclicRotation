@@ -1,0 +1,21 @@
+/* 
+CyclicRotation
+Rotate an array to the right by a given number of steps.
+*/
+
+    public int[] solution(int[] A, int K) {
+        int N = A.length;
+        int[] rotated = new int[N];
+        for (int i = 0; i < N; i++) {
+            rotated[findNewIndex(N, i, K)] = A[i];
+        }
+        return rotated;
+    }
+
+    private int findNewIndex(int length, int current, int k) {
+        if (current + k > length - 1) {
+            return (current + k) % length;
+        } else {
+            return current + k;
+        }
+    }
