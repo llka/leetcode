@@ -16,6 +16,18 @@ answer will be 2 - 5
 */
 
 public class Solution {
+    private static final Logger logger = LogManager.getLogger(Solution.class);
+
+    class Coordinates {
+        int i;
+        int j;
+
+        Coordinates(int i, int j) {
+            this.i = i;
+            this.j = j;
+        }
+    }
+
     public int[] findMaxIsland(int[][] matrix) {
         int M = matrix.length;
         int N = matrix[0].length;
@@ -24,28 +36,34 @@ public class Solution {
 
         int maxCountKey = matrix[0][0];
         int maxCountValue = 0;
-        ArrayDeque<Pair<Integer, Integer>> queue = new ArrayDeque<>();
+        ArrayDeque<Coordinates> queue = new ArrayDeque<>();
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
-                int count = findAdjacentFieldsCount(matrix, visited, i, j, queue);
+                int count = 1;
+                findAdjacentFieldsCount(matrix, visited, i, j, queue);
+                while (!queue.isEmpty()) {
+                    Coordinates coordinates = queue.pollFirst();
+                    if (!visited[coordinates.i][coordinates.j]) {
+                        count++;
+                        findAdjacentFieldsCount(matrix, visited, coordinates.i, coordinates.j, queue);
+                    }
+                }
                 if (count > maxCountValue) {
                     maxCountKey = matrix[i][j];
                     maxCountValue = count;
                 }
             }
         }
-        System.out.println(maxCountKey + ": " + maxCountValue);
-
+        logger.debug(maxCountKey + ": " + maxCountValue);
         return new int[]{maxCountKey, maxCountValue};
     }
 
     private int findAdjacentFieldsCount(int[][] matrix, boolean[][] visited, int i, int j,
-                                        ArrayDeque<Pair<Integer, Integer>> queue) {
+                                        ArrayDeque<Coordinates> queue) {
         if (visited[i][j]) {
             return 0;
         }
         visited[i][j] = true;
-        int count = 1;
         int[][] waysVector = {{0, -1}, {-1, 0}, {0, 1}, {1, 0}};
         for (int k = 0; k < 4; k++) {
             int key = matrix[i][j];
@@ -53,16 +71,11 @@ public class Solution {
             int jNeighbour = j + waysVector[k][1];
             if (inBounds(iNeighbour, matrix.length) && inBounds(jNeighbour, matrix[0].length)) {
                 if (!visited[iNeighbour][jNeighbour] && matrix[iNeighbour][jNeighbour] == key) {
-                    queue.push(new Pair<>(iNeighbour, jNeighbour));
-                    while (!queue.isEmpty()) {
-                        Pair<Integer, Integer> coordinates = queue.poll();
-                        count += findAdjacentFieldsCount(matrix, visited,
-                                coordinates.getKey(), coordinates.getValue(), queue);
-                    }
+                    queue.push(new Coordinates(iNeighbour, jNeighbour));
                 }
             }
         }
-        return count;
+        return 0;
     }
 
     private boolean inBounds(int coordinate, int maxValue) {
