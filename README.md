@@ -116,6 +116,16 @@ my leetcode problems solutions
 |9|[ Palindrome Number]( https://leetcode.com/problems/palindrome-number/description/) | [Java](./math/9.%20Palindrome%20Number)|Easy| 
 |587|[ Erect the Fence]( https://leetcode.com/problems/erect-the-fence/description/) | [Java](./geometry/587.%20Erect%20the%20Fence)|Hard| 
 
+#   Queue
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|621|[ Task Scheduler](https://leetcode.com/problems/task-scheduler/description/) | [Java](./queue/621.%20Task%20Scheduler)|Medium| 
+
+#   Set 
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|771|[ Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/description/) | [Java](./set/771.%20Jewels%20and%20Stones)|Easy| 
+
 #  Without Tag
 
 | # | Title | Solution | Difficulty |
@@ -130,5 +140,4 @@ my leetcode problems solutions
 |7|[ Reverse Integer]( https://leetcode.com/problems/reverse-integer/description/) | [Java](./7.%20Reverse%20Integer)|Easy| 
 |88|[ Merge Sorted Array]( https://leetcode.com/problems/merge-sorted-array/description/) | [Java](./88.%20Merge%20Sorted%20Array)|Easy| 
 |804|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/) | [Java](./804.%20Unique%20Morse%20Code%20Words)|Easy|
-|N|[ Flood fill ](./Flood%20fill) | [Java](./Flood%20fill)|Easy| 
-
+|0|[ Flood fill](https://leetcode.com/problems/flood-fill/description/) | [Java](./0.%20Flood%20fill)|Easy| 
