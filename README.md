@@ -64,6 +64,7 @@ my leetcode problems solutions
 |620|[Not Boring Movies](https://leetcode.com/problems/not-boring-movies/description/) | [MySQL](./database/620.%20Not%20Boring%20Movies)|Easy|
 |626|[Exchange Seats](https://leetcode.com/problems/exchange-seats/) | [MySQL](./database/626.%20Exchange%20Seats)|Medium|
 |627|[Swap Salary](https://leetcode.com/problems/swap-salary/description/) | [MySQL](./database/627.%20Swap%20Salary)|Easy|
+|262|[ Trips and Users](https://leetcode.com/problems/trips-and-users/description/) | [MySQL](./database/262.%20Trips%20and%20Users)|Hard|
 
 #  Design
 
