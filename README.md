@@ -42,6 +42,7 @@ my leetcode problems solutions
 |530|[ Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/) | [Java](./tree/530.%20Minimum%20Absolute%20Difference%20in%20BST)|Easy| 
 |538|[ Convert BST to Greater Tree]( https://leetcode.com/problems/convert-bst-to-greater-tree/description/) | [Java](./tree/538.%20Convert%20BST%20to%20Greater%20Tree)|Easy| 
 |617|[ Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/) | [Java](./tree/617.%20Merge%20Two%20Binary%20Trees)|Easy| 
+|543|[ Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/description/) | [Java](./tree/543.%20Diameter%20of%20Binary%20Tree)|Easy| 
 
 #  Database
 
