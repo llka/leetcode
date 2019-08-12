@@ -30,6 +30,7 @@ my leetcode problems solutions
 |160|[ Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/description/) | [Java](./linkedList/160.%20Intersection%20of%20Two%20Linked%20Lists)|Easy| 
 |21|[ Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/) | [Java](./linkedList/21.%20Merge%20Two%20Sorted%20Lists)|Easy| 
 |234|[ Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/description/) | [Java](./linkedList/234.%20Palindrome%20Linked%20List)|Easy| 
+|237|[ Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/description/) | [Java](./linkedList/237.%20Delete%20Node%20in%20a%20Linked%20List)|Easy| 
 
 
 #  Tree
