@@ -1,0 +1,54 @@
+/*
+Remove all elements from a linked list of integers that have value val.
+
+Example:
+
+Input:  1->2->6->3->4->5->6, val = 6
+Output: 1->2->3->4->5
+*/
+
+/*
+Idea: iterate threw list and check if next.val == val and find appropriate next listNode.
+*/
+
+class Solution {
+     public ListNode removeElements(ListNode head, int val) {
+         if(head == null){
+            return null;
+        }
+        /* if head must be removed */
+        if (head.val == val) {
+            return removeElements(findValidNext(head, val), val);
+        }
+        
+        ListNode curr = head;
+        ListNode next = curr.next;
+
+        while (next != null) {
+            if (next.val == val) {
+                curr.next = findValidNext(next, val);
+                curr = curr.next;
+                next = curr == null ? null : curr.next;
+            } else {
+                curr = next;
+                next = curr.next;
+            }
+        }
+        return head;
+    }
+
+    private ListNode findValidNext(ListNode curr, int val) {
+        if (curr.next != null) {
+            while (curr != null) {
+                if (curr.val == val) {
+                    curr = curr.next;
+                } else {
+                    return curr;
+                }
+            }
+        } else {
+            return null;
+        }
+        return null;
+    }
+}
