@@ -34,7 +34,7 @@ my leetcode problems solutions
 |203|[ Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [Java](./linkedList/203.%20Remove%20Linked%20List%20Elements)|Easy|
 |328|[ Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | [Java](./linkedList/328.%20Odd%20Even%20Linked%20List)|Medium|
 |000|[ Merge two sorted linked lists](https://practice.geeksforgeeks.org/problems/merge-two-sorted-linked-lists/1) | [Java](./linkedList/Merge%20two%20sorted%20linked%20lists)|Easy|
-|148|[ Sort List](https://leetcode.com/problems/sort-list/) | [Java] (./leetcode/blob/master/linkedList/148.%20Sort%20List)|Medium|
+|148|[ Sort List](https://leetcode.com/problems/sort-list/) | [Java](./leetcode/blob/master/linkedList/148.%20Sort%20List)|Medium|
 
 
 #  Tree
