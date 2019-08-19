@@ -21,6 +21,8 @@ my leetcode problems solutions
 |766|[ Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/description/) | [Java](./array/766.%20Toeplitz%20Matrix)|Easy| 
 |832|[ Flipping an Image](https://leetcode.com/problems/flipping-an-image/description/) | [Java](./array/832.%20Flipping%20an%20Image)|Easy| 
 |868|[ Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/) | [Java](./array/868.%20Transpose%20Matrix)|Easy| 
+|704|[ Binary Search](https://leetcode.com/problems/binary-search/) | [Java](./array/704.%20Binary%20Search)|Easy| 
+
 
 #  Linked List
 
