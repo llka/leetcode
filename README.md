@@ -22,6 +22,8 @@ my leetcode problems solutions
 |832|[ Flipping an Image](https://leetcode.com/problems/flipping-an-image/description/) | [Java](./array/832.%20Flipping%20an%20Image)|Easy| 
 |868|[ Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/) | [Java](./array/868.%20Transpose%20Matrix)|Easy| 
 |704|[ Binary Search](https://leetcode.com/problems/binary-search/) | [Java](./array/704.%20Binary%20Search)|Easy| 
+|33|[ Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Java](./array/33.%20Search%20in%20Rotated%20Sorted%20Array)|Medium| 
+
 
 
 #  Linked List
