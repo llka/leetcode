@@ -1,0 +1,77 @@
+/*
+Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+
+Example:
+
+Input:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+Output: 1->1->2->3->4->4->5->6
+*/
+
+/*
+Idea:  merge 2 lists (k-1) times.
+Time complexity : O(kN)  
+*/
+
+class Solution {
+  private ListNode mergeSortedLinkedLists(ListNode a, ListNode b) {
+        if (a == null) return b;
+        if (b == null) return a;
+
+        ListNode merged;
+        if (a.val < b.val) {
+            merged = a;
+            a = a.next;
+        } else {
+            merged = b;
+            b = b.next;
+        }
+        ListNode headRef = merged;
+
+        while (a != null || b != null) {
+            if (a != null && b != null) {
+                if (a.val < b.val) {
+                    merged.next = a;
+                    a = a.next;
+                } else {
+                    merged.next = b;
+                    b = b.next;
+                }
+            } else if (a != null) {
+                merged.next = a;
+                a = a.next;
+            } else if (b != null) {
+                merged.next = b;
+                b = b.next;
+            } else {
+                return headRef;
+            }
+            merged = merged.next;
+        }
+        return headRef;
+    }
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
+        
+        for (int i = 1; i < lists.length; i++) {
+            lists[0] = mergeSortedLinkedLists(lists[0], lists[i]);
+        }
+        return lists[0];
+    }
+}
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
