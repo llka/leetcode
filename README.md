@@ -23,6 +23,8 @@ my leetcode problems solutions
 |868|[ Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/) | [Java](./array/868.%20Transpose%20Matrix)|Easy| 
 |704|[ Binary Search](https://leetcode.com/problems/binary-search/) | [Java](./array/704.%20Binary%20Search)|Easy| 
 |33|[ Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Java](./array/33.%20Search%20in%20Rotated%20Sorted%20Array)|Medium| 
+|27|[ Remove Element](https://leetcode.com/problems/remove-element/) | [Java](./array/27.%20Remove%20Element)|Easy| 
+
 
 
 
