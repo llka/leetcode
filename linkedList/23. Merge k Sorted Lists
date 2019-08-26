@@ -13,11 +13,70 @@ Output: 1->1->2->3->4->4->5->6
 */
 
 /*
+Idea:
+Divide & Conquer
+
+Merge lists by pairs, put them into new array and recurively call margeKlists on new array :)
+
+1, 2, 3, 4, 5
+12, 34, 5
+1234, 5
+12345
+
+Time complexity : O(N * log(k))  
+*/
+
+public ListNode mergeKLists(ListNode[] lists) {
+      if (lists == null || lists.length == 0) {
+          return null;
+      }
+
+      ListNode[] paired = new ListNode[lists.length % 2 == 0 ? lists.length / 2 : lists.length / 2 + 1];
+      int pairedIdx = 0;
+      for (int i = 0; i < lists.length; i++) {
+          if (i + 1 < lists.length) {
+              paired[pairedIdx++] = mergeSortedLinkedLists(lists[i], lists[++i]);
+          } else {
+              paired[pairedIdx++] = lists[i];
+          }
+      }
+
+      if (paired.length == 1) {
+          return paired[0];
+      } else if (paired.length == 2) {
+          return mergeSortedLinkedLists(paired[0], paired[1]);
+      } else {
+          return mergeKLists(paired);
+      }
+  }
+
+
+
+
+/*
 Idea:  merge 2 lists (k-1) times.
-Time complexity : O(kN)  
+
+1, 2, 3, 4, 5
+12, 3, 4, 5
+123, 4, 5
+1234, 5
+12345
+
+Time complexity : O(N*k)  
 */
 
 class Solution {
+ public ListNode mergeKLists(ListNode[] lists) {
+      if (lists == null || lists.length == 0) {
+          return null;
+      }
+
+      for (int i = 1; i < lists.length; i++) {
+          lists[0] = mergeSortedLinkedLists(lists[0], lists[i]);
+      }
+      return lists[0];
+  }
+
   private ListNode mergeSortedLinkedLists(ListNode a, ListNode b) {
         if (a == null) return b;
         if (b == null) return a;
@@ -53,17 +112,6 @@ class Solution {
             merged = merged.next;
         }
         return headRef;
-    }
-
-    public ListNode mergeKLists(ListNode[] lists) {
-        if (lists == null || lists.length == 0) {
-            return null;
-        }
-        
-        for (int i = 1; i < lists.length; i++) {
-            lists[0] = mergeSortedLinkedLists(lists[0], lists[i]);
-        }
-        return lists[0];
     }
 }
 
