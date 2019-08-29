@@ -1,4 +1,14 @@
-public class MyLinkedList {
+/*
+Implement these functions in your linked list class:
+
+get(index) : Get the value of the index-th node in the linked list. If the index is invalid, return -1.
+addAtHead(val) : Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+addAtTail(val) : Append a node of value val to the last element of the linked list.
+addAtIndex(index, val) : Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. If index is negative, the node will be inserted at the head of the list.
+deleteAtIndex(index) : Delete the index-th node in the linked list, if the index is valid.
+*/
+
+class MyLinkedList {
     class Node {
         int val;
         Node prev;
@@ -26,7 +36,7 @@ public class MyLinkedList {
      * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
      */
     public int get(int index) {
-        if (index < 0 || index > length || length == 0) {
+        if (!isIndexValid(index)) {
             return -1;
         }
         return getNode(index).val;
@@ -36,11 +46,12 @@ public class MyLinkedList {
      * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
      */
     public void addAtHead(int val) {
+        Node cur = new Node(val, null, head);
+
         if (head == null) {
-            head = new Node(val, null, null);
+            head = cur;
             tail = head;
         } else {
-            Node cur = new Node(val, null, head);
             head.prev = cur;
             head = cur;
         }
@@ -52,27 +63,30 @@ public class MyLinkedList {
      */
     public void addAtTail(int val) {
         Node cur = new Node(val, tail, null);
-        tail.next = cur;
+        if (tail == null) {
+            head = cur;
+        } else {
+            tail.next = cur;
+            cur.prev = tail;
+        }
         tail = cur;
         length++;
     }
 
     /**
-     * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
+     * Add a node of value val before the index-th node in the linked list.
+     * If index equals to the length of linked list,
+     * the node will be appended to the end of linked list.
+     * If index is greater than the length, the node will not be inserted.
      */
     public void addAtIndex(int index, int val) {
-        if (index < 0 || index > length) {
+        if (index > length) {
             return;
         }
         if (index == length) {
-            if (tail == null) {
-                tail = new Node(val, null, null);
-                head = tail;
-            } else {
-                Node cur = new Node(val, tail, null);
-                tail.next = cur;
-            }
-            length++;
+            addAtTail(val);
+        } else if (index <= 0) {
+            addAtHead(val);
         } else {
             Node next = getNode(index);
             if (next != null) {
@@ -83,10 +97,6 @@ public class MyLinkedList {
                 }
                 next.prev = cur;
                 length++;
-
-                if (index == 1) {
-                    head = cur;
-                }
             }
         }
     }
@@ -95,29 +105,29 @@ public class MyLinkedList {
      * Delete the index-th node in the linked list, if the index is valid.
      */
     public void deleteAtIndex(int index) {
-        Node cur = getNode(index);
-        if (cur != null) {
-            Node next = cur.next;
-            Node prev = cur.prev;
-            if (prev != null) {
-                prev.next = next;
-            }
-            if (next != null) {
-                next.prev = prev;
-            }
-            length--;
-
-            if (index == length) {
-                tail = next != null ? next : prev;
-            }
-            if (index == 1) {
-                head = next;
-            }
+        if (!isIndexValid(index)) {
+            return;
         }
+
+        Node cur = getNode(index);
+
+        Node next = cur.next;
+        Node prev = cur.prev;
+        if (prev != null) {
+            prev.next = next;
+        } else {
+            head = next;
+        }
+        if (next != null) {
+            next.prev = prev;
+        } else {
+            tail = prev;
+        }
+        length--;
     }
 
     private Node getNode(int index) {
-        if (index < 0 || index > length || length == 0) {
+        if (!isIndexValid(index)) {
             return null;
         }
 
@@ -129,6 +139,6 @@ public class MyLinkedList {
     }
 
     private boolean isIndexValid(int index) {
-        return index >= 0 && index <= length && length != 0;
+        return index >= 0 && index < length && length != 0;
     }
 }
