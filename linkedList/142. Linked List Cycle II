@@ -1,0 +1,54 @@
+/*
+Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+*/
+
+/*
+Idea:
+
+x - head to entry point;
+y - meating point to entry point;
+s - cycle length;
+
+ x
+0-0-e.p.-0-0-0-0
+     |         |
+     0-0-m-0-0-0
+     
+t slow = t fast => (x + (S-y)) / 1 = (x + S + (S - y)) / 2 <=> 2x + 2S + 2y = x +2S - y <=> x = y
+*/
+
+public class Solution {
+    public ListNode detectCycle(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode slow = head.next;
+        ListNode fast = head.next == null ? null : head.next.next;
+
+        while (slow != null && fast != null) {
+            if (slow == fast) {
+                ListNode slowFromHead = head;
+                while (slow != slowFromHead) {
+                    slow = slow.next;
+                    slowFromHead = slowFromHead.next;
+                }
+                return slowFromHead;
+            }
+            slow = slow.next;
+            fast = fast.next == null ? null : fast.next.next;
+        }
+        return null;
+    }
+}
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
