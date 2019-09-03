@@ -33,6 +33,7 @@ my leetcode problems solutions
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |141|[ Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/) | [Java](./linkedList/141.%20Linked%20List%20Cycle)|Easy| 
+|142|[ Linked List Cycle find cycle start point](https://leetcode.com/problems/linked-list-cycle-ii/) | [Java](./linkedList/142.%20Linked%20List%20Cycle%20II)|Medium| 
 |160|[ Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/description/) | [Java](./linkedList/160.%20Intersection%20of%20Two%20Linked%20Lists)|Easy| 
 |21|[ Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/) | [Java](./linkedList/21.%20Merge%20Two%20Sorted%20Lists)|Easy| 
 |234|[ Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/description/) | [Java](./linkedList/234.%20Palindrome%20Linked%20List)|Easy| 
