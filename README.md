@@ -44,6 +44,7 @@ my leetcode problems solutions
 |148|[ Sort List](https://leetcode.com/problems/sort-list/) | [Java](./linkedList/148.%20Sort%20List)|Medium|
 |23|[ Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [Java](./linkedList/23.%20Merge%20k%20Sorted%20Lists)|Hard|
 |19|[ Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Java](./linkedList/19.%20Remove%20Nth%20Node%20From%20End%20of%20List)|Medium|
+|206|[ Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [Java](./linkedList/206.%20Reverse%20Linked%20List)|Easy|
 
 
 
