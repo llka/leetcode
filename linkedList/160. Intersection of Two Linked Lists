@@ -1,3 +1,49 @@
+/*
+Write a program to find the node at which the intersection of two singly linked lists begins.
+
+For example, the following two linked lists:
+
+a1 - a2 - a3 
+              c1 - c2 - c3
+     b1 - b2 
+
+begin to intersect at node c1.
+*/
+
+/*
+Idea:
+
+a + c + b = b + c + a
+
+*/
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode a = headA;
+        ListNode b = headB;
+        
+        boolean aEnd = false;
+        boolean bEnd = false;
+        
+        while(a != null && b != null){
+            if(a.next == null && aEnd == false){
+                a = headB;
+                aEnd = true;
+            }
+            if(b.next == null && bEnd == false){
+                b = headA;
+                bEnd = true;
+            }
+            if(a == b && aEnd && bEnd){
+                return a;
+            }
+            a = a.next;
+            b = b.next;
+        }
+       
+        return null;
+    }
+}
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
