@@ -43,6 +43,7 @@ my leetcode problems solutions
 |000|[ Merge two sorted linked lists](https://practice.geeksforgeeks.org/problems/merge-two-sorted-linked-lists/1) | [Java](./linkedList/Merge%20two%20sorted%20linked%20lists)|Easy|
 |148|[ Sort List](https://leetcode.com/problems/sort-list/) | [Java](./linkedList/148.%20Sort%20List)|Medium|
 |23|[ Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [Java](./linkedList/23.%20Merge%20k%20Sorted%20Lists)|Hard|
+|19|[ Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Java](./linkedList/19.%20Remove%20Nth%20Node%20From%20End%20of%20List)|Medium|
 
 
 
