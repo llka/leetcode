@@ -149,7 +149,8 @@ my leetcode problems solutions
 #  Two Pointers
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|11|[ Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [Java](./two_pointers/11.%20Container%20With%20Most%20Water)|Medium| 
+|11|[ Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [Java](./two_pointers/11.%20Container%20With%20Most%20Water)|Medium|
+|42|[ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [Java](./two_pointers/42.%20Trapping%20Rain%20Water)|Hard| 
 
 #  Without Tag
 
