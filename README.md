@@ -102,7 +102,7 @@ my leetcode problems solutions
 |53|[ Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/) | [Java](./dp/53.%20Maximum%20Subarray)|Easy| 
 |70|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) | [Java](./dp/70.%20Climbing%20Stairs.txt)|Easy|
 |198|[House Robber](https://leetcode.com/problems/house-robber/description/) | [Java](./dp/198.%20House%20Robber.txt)|Easy|
-
+|42|[ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [Java](https://github.com/llka/leetcode/blob/master/dp/42.%20Trapping%20Rain%20Water)|Hard| 
 #  Math
 
 | # | Title | Solution | Difficulty |
