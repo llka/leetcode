@@ -1,0 +1,78 @@
+/*
+Given n non-negative integers representing an elevation map where the width of each bar is 1,
+compute how much water it is able to trap after raining.
+
+Example:
+Input: [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+
+https://github.com/llka/leetcode/blob/master/two_pointers/42.%20Trapping%20Rain%20Water
+*/
+
+/*
+Idea: store max heigth moving from left, then from right.
+On that values where they cross.
+
+*/
+
+public int trap(int[] height) {
+    if(height.length == 0){
+        return 0;
+    }
+
+    int sum = 0;
+    int[] maxFromLeft = new int[height.length];
+    int[] maxFromRight = new int[height.length];
+
+    maxFromLeft[0] = height[0];
+    for (int i = 1; i < height.length; i++) {
+        maxFromLeft[i] = Math.max(maxFromLeft[i-1], height[i]);
+    }
+
+    maxFromRight[height.length - 1] = height[height.length - 1];
+    for (int i = height.length - 2; i > -1; i--) {
+        maxFromRight[i] = Math.max(maxFromRight[i+1],height[i]);
+    }
+
+    for(int i = 0; i< height.length; i++){
+        sum += (Math.min(maxFromLeft[i], maxFromRight[i]) - height[i]);
+    }
+    return sum;
+}
+
+
+/*Memory Limit Exceeded*/
+public int trap(int[] height) {
+        int sum = 0;
+        int max = 0;
+
+        for (int i = 0; i < height.length; i++) {
+            max = Math.max(max, height[i]);
+        }
+
+        boolean[][] fromLeft = new boolean[height.length][max];
+        int currentMaxLeft = 0;
+        for (int i = 0; i < height.length; i++) {
+            if (height[i] > currentMaxLeft) {
+                currentMaxLeft = height[i];
+            } else {
+                for (int j = height[i]; j < currentMaxLeft; j++) {
+                    fromLeft[i][j] = true;
+                }
+            }
+        }
+
+        int currentMaxRight = 0;
+        for (int i = height.length - 1; i > -1; i--) {
+            if (height[i] > currentMaxRight) {
+                currentMaxRight = height[i];
+            } else {
+                for (int j = height[i]; j < currentMaxRight; j++) {
+                    if (fromLeft[i][j]) {
+                        sum++;
+                    }
+                }
+            }
+        }
+        return sum;
+    }
