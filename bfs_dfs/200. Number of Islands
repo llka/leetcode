@@ -1,0 +1,106 @@
+/*
+Given a 2d grid map of '1's (land) and '0's (water), count the number of islands.
+An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
+You may assume all four edges of the grid are all surrounded by water.
+
+Example:
+
+Input:
+1 1 0 0 0
+1 1 0 0 0
+0 0 1 0 0
+0 0 0 1 1
+
+Output: 3
+*/
+
+class Solution {
+    private static final char LAND = '1';
+    private static final char WATER = '0';
+    
+    public int numIslands(char[][] grid) {
+        if(grid.length == 0){
+            return 0;
+        }
+        
+        boolean[][] isVisitedGrid = new boolean[grid.length][grid[0].length];
+       
+        int islandCounter = 0;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (!isVisitedGrid[i][j]) {
+                    if (grid[i][j] == LAND) {
+                        traverseIsland(grid, isVisitedGrid, i, j);
+                        islandCounter++;
+                    }
+                }
+            }
+        }
+        return islandCounter;
+    }
+
+    // depth first search (because it's recursion)
+    private void traverseIsland(char[][] grid, boolean[][] isVisitedGrid, int i, int j) {
+        
+        if (grid[i][j] == WATER || isVisitedGrid[i][j]) {
+            return;
+        }
+
+        isVisitedGrid[i][j] = true;
+        if (isInBound(grid, i + 1, j) && grid[i + 1][j] == LAND) {
+            traverseIsland(grid, isVisitedGrid, i + 1, j);
+        }
+        if (isInBound(grid, i - 1, j) && grid[i - 1][j] == LAND) {
+            traverseIsland(grid, isVisitedGrid, i - 1, j);
+        }
+        if (isInBound(grid, i, j + 1) && grid[i][j + 1] == LAND) {
+            traverseIsland(grid, isVisitedGrid, i, j + 1);
+        }
+        if (isInBound(grid, i, j - 1) && grid[i][j - 1] == LAND) {
+            traverseIsland(grid, isVisitedGrid, i, j - 1);
+        }
+    }
+
+    private boolean isInBound(char[][] grid, int i, int j) {
+        return i >= 0 && i < grid.length && 
+                j >= 0 && j < grid[i].length;
+    }
+    
+    private void traverseIslandBreadthFirstSearch(char[][] grid, boolean[][] isVisitedGrid, int iInit, int jInit) {
+        if (grid[iInit][jInit] == WATER || isVisitedGrid[iInit][jInit]) {
+            return;
+        }
+        ArrayDeque<Coordinate> queue = new ArrayDeque<>();
+        queue.addFirst(new Coordinate(iInit,jInit));
+
+        while (!queue.isEmpty()) {
+            Coordinate coordinate = queue.pollFirst();
+            int i = coordinate.i;
+            int j = coordinate.j;
+            
+            isVisitedGrid[i][j] = true;
+            if (isInBound(grid, i + 1, j) && grid[i + 1][j] == LAND && !isVisitedGrid[i + 1][j]) {
+                queue.addLast(new Coordinate(i + 1, j));
+            }
+            if (isInBound(grid, i - 1, j) && grid[i - 1][j] == LAND && !isVisitedGrid[i - 1][j]) {
+                queue.addLast(new Coordinate(i - 1, j));
+            }
+            if (isInBound(grid, i, j + 1) && grid[i][j + 1] == LAND && !isVisitedGrid[i][j + 1]) {
+                queue.addLast(new Coordinate(i, j + 1));
+            }
+            if (isInBound(grid, i, j - 1) && grid[i][j - 1] == LAND && !isVisitedGrid[i][j - 1]) {
+                queue.addLast(new Coordinate(i, j - 1));
+            }
+        }
+    }
+    
+    class Coordinate{
+        int i;
+        int j;
+
+        public Coordinate(int i, int j) {
+            this.i = i;
+            this.j = j;
+        }
+    }
+}
