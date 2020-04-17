@@ -27,8 +27,10 @@ my leetcode problems solutions
 |287|[ Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [Java](./array/287.%20Find%20the%20Duplicate%20Number)|Medium| 
 
 
-
-
+#  Breadth and Depth First Search
+| # | Title | Solution | Difficulty |
+|---| ----- | -------- | ---------- |
+|200|[ Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Java](./bfs_dfs/200.%20Number%20of%20Islands)|Medium| 
 
 #  Linked List
 
