@@ -16,69 +16,89 @@ answer will be 2 - 5
 */
 
 public class Solution {
-    private static final Logger logger = LogManager.getLogger(Solution.class);
 
-    class Coordinates {
-        int i;
-        int j;
+    public int[] findMaxIsland(int[][] grid) {
+        boolean[][] isVisitedGrid = new boolean[grid.length][grid[0].length];
 
-        Coordinates(int i, int j) {
-            this.i = i;
-            this.j = j;
-        }
-    }
-
-    public int[] findMaxIsland(int[][] matrix) {
-        int M = matrix.length;
-        int N = matrix[0].length;
-
-        boolean[][] visited = new boolean[M][N];
-
-        int maxCountKey = matrix[0][0];
+        int maxCountKey = 0;
         int maxCountValue = 0;
-        ArrayDeque<Coordinates> queue = new ArrayDeque<>();
-        for (int i = 0; i < M; i++) {
-            for (int j = 0; j < N; j++) {
-                int count = 1;
-                findAdjacentFieldsCount(matrix, visited, i, j, queue);
-                while (!queue.isEmpty()) {
-                    Coordinates coordinates = queue.pollFirst();
-                    if (!visited[coordinates.i][coordinates.j]) {
-                        count++;
-                        findAdjacentFieldsCount(matrix, visited, coordinates.i, coordinates.j, queue);
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (!isVisitedGrid[i][j]) {
+                    int islandKey = grid[i][j];
+                    int count = traverseIslandAndCountFields(islandKey, grid, isVisitedGrid, i, j);
+
+                    if (count > maxCountValue) {
+                        maxCountKey = islandKey;
+                        maxCountValue = count;
                     }
-                }
-                if (count > maxCountValue) {
-                    maxCountKey = matrix[i][j];
-                    maxCountValue = count;
                 }
             }
         }
-        logger.debug(maxCountKey + ": " + maxCountValue);
         return new int[]{maxCountKey, maxCountValue};
     }
 
-    private int findAdjacentFieldsCount(int[][] matrix, boolean[][] visited, int i, int j,
-                                        ArrayDeque<Coordinates> queue) {
-        if (visited[i][j]) {
-            return 0;
-        }
-        visited[i][j] = true;
-        int[][] waysVector = {{0, -1}, {-1, 0}, {0, 1}, {1, 0}};
-        for (int k = 0; k < 4; k++) {
-            int key = matrix[i][j];
-            int iNeighbour = i + waysVector[k][0];
-            int jNeighbour = j + waysVector[k][1];
-            if (inBounds(iNeighbour, matrix.length) && inBounds(jNeighbour, matrix[0].length)) {
-                if (!visited[iNeighbour][jNeighbour] && matrix[iNeighbour][jNeighbour] == key) {
-                    queue.push(new Coordinates(iNeighbour, jNeighbour));
-                }
+    // breadth first search
+    private int traverseIslandAndCountFields(int value, int[][] grid, boolean[][] isVisitedGrid, int iInit, int jInit) {
+        int counter = 0;
+
+        ArrayDeque<Coordinate> queue = new ArrayDeque<>();
+        queue.addFirst(new Coordinate(iInit, jInit));
+
+        while (!queue.isEmpty()) {
+            Coordinate coordinate = queue.pollFirst();
+            int i = coordinate.i;
+            int j = coordinate.j;
+
+            if (!isVisitedGrid[i][j]) {
+                counter++;
+                isVisitedGrid[i][j] = true;
+
+                List.of(new Coordinate(i + 1, j),
+                        new Coordinate(i - 1, j),
+                        new Coordinate(i, j + 1),
+                        new Coordinate(i, j - 1))
+                        .stream()
+                        .filter(c -> c.isNewLandOfCurrentIsland(value, grid, isVisitedGrid))
+                        .forEach(queue::addLast);
             }
         }
-        return 0;
+        return counter;
     }
 
-    private boolean inBounds(int coordinate, int maxValue) {
-        return coordinate > -1 && coordinate < maxValue;
+    private static class Coordinate {
+        int i;
+        int j;
+
+        public Coordinate(int i, int j) {
+            this.i = i;
+            this.j = j;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(i, j);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+            Coordinate that = (Coordinate) o;
+            return i == that.i &&
+                    j == that.j;
+        }
+
+        boolean isNewLandOfCurrentIsland(int value, int[][] grid, boolean[][] isVisited) {
+            return i >= 0 && i < grid.length
+                    && j >= 0 && j < grid[i].length
+                    && grid[i][j] == value
+                    && !isVisited[i][j];
+        }
     }
 }
