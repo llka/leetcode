@@ -31,7 +31,9 @@ my leetcode problems solutions
 #  Breadth and Depth First Search
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|200|[ Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Java](./bfs_dfs/200.%20Number%20of%20Islands)|Medium| 
+|200|[ Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Java](./bfs_dfs/200.%20Number%20of%20Islands)|Medium|
+|695|[ Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/) | [Java](./array/695.%20Max%20Area%20of%20Island)|Medium| 
+|0|[ Flood fill](https://leetcode.com/problems/flood-fill/description/) | [Java](./0.%20Flood%20fill)|Easy| 
 
 #  Linked List
 
@@ -169,4 +171,3 @@ my leetcode problems solutions
 |7|[ Reverse Integer]( https://leetcode.com/problems/reverse-integer/description/) | [Java](./7.%20Reverse%20Integer)|Easy| 
 |88|[ Merge Sorted Array]( https://leetcode.com/problems/merge-sorted-array/description/) | [Java](./88.%20Merge%20Sorted%20Array)|Easy| 
 |804|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/) | [Java](./804.%20Unique%20Morse%20Code%20Words)|Easy|
-|0|[ Flood fill](https://leetcode.com/problems/flood-fill/description/) | [Java](./0.%20Flood%20fill)|Easy| 
