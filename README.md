@@ -24,7 +24,8 @@ my leetcode problems solutions
 |704|[ Binary Search](https://leetcode.com/problems/binary-search/) | [Java](./array/704.%20Binary%20Search)|Easy| 
 |33|[ Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Java](./array/33.%20Search%20in%20Rotated%20Sorted%20Array)|Medium| 
 |27|[ Remove Element](https://leetcode.com/problems/remove-element/) | [Java](./array/27.%20Remove%20Element)|Easy| 
-|287|[ Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [Java](./array/287.%20Find%20the%20Duplicate%20Number)|Medium| 
+|287|[ Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [Java](./array/287.%20Find%20the%20Duplicate%20Number)|Medium|
+|000|[ Leftmost Column with at Least a One](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/530/week-3/3306/) | [Java](./array/Leftmost%20Column%20with%20at%20Least%20a%20One)|Medium|
 
 
 #  Breadth and Depth First Search
