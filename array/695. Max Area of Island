@@ -1,40 +1,85 @@
+/*
+Given a non-empty 2D array grid of 0's and 1's.
+An island is a group of 1's (representing land) connected 4-directionally (horizontal or vertical).
+You may assume all four edges of the grid are surrounded by water.
+
+Find the maximum area of an island in the given 2D array.
+If there is no island, the maximum area is 0.
+
+Example:
+
+[[0,0,1,0,0,0,0,1,0,0,0,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,1,1,0,1,0,0,0,0,0,0,0,0],
+ [0,1,0,0,1,1,0,0,1,0,1,0,0],
+ [0,1,0,0,1,1,0,0,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,1,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+Given the above grid, return 6.
+
+Idea: found any not visited LAND and traverse the new island.
+*/
+
 class Solution {
+    final static int LAND = 1;
+    final static int WATER = 0;
     
-    class Point {
-        int i;
-        int j;
-
-        int square;
-
-        public Point(int i, int j) {
-            this.i = i;
-            this.j = j;
+    public int maxAreaOfIsland(int[][] grid) {
+        if (grid.length == 0) {
+            return 0;
         }
+        boolean[][] isVisited = new boolean[grid.length][grid[0].length];
 
-        public int getSquare() {
-            return square;
+        int maxArea = 0;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (grid[i][j] == LAND && !isVisited[i][j]) {
+                    int currentIslandArea = traverseIslandAndCountLand(grid, isVisited, i, j);
+                    maxArea = Math.max(maxArea, currentIslandArea);
+                }
+            }
         }
-
-        public void setSquare(int square) {
-            this.square = square;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Point point = (Point) o;
-            return i == point.i &&
-                    j == point.j;
-        }
-
-        @Override
-        public int hashCode() {
-
-            return Objects.hash(i, j);
-        }
+        return maxArea;
     }
-    
+
+    // depth first search
+    private int traverseIslandAndCountLand(int[][] grid, boolean[][] isVisited, int i, int j) {
+        if (isVisited[i][j] || grid[i][j] == WATER) {
+            return 0;
+        }
+        isVisited[i][j] = true;
+        
+        int counter = 1;
+        if (isNewIslandLand(grid, isVisited, i + 1, j)) {
+            counter += traverseIslandAndCountLand(grid, isVisited, i + 1, j);
+        }
+        if (isNewIslandLand(grid, isVisited, i - 1, j)) {
+            counter += traverseIslandAndCountLand(grid, isVisited, i - 1, j);
+        }
+        if (isNewIslandLand(grid, isVisited, i, j + 1)) {
+            counter += traverseIslandAndCountLand(grid, isVisited, i, j + 1);
+        }
+        if (isNewIslandLand(grid, isVisited, i, j - 1)) {
+            counter += traverseIslandAndCountLand(grid, isVisited, i, j - 1);
+        }
+        return counter;
+    }
+
+    private boolean isNewIslandLand(int[][] grid, boolean[][] isVisited, int i, int j) {
+        return i >= 0 && i < grid.length &&
+                j >= 0 && j < grid[i].length &&
+                !isVisited[i][j] &&
+                grid[i][j] == LAND;
+    }
+}
+
+
+//--------------------------------------------------------------------------------------------------------------------
+//-------------------------------------Breadth First Solution via Queue-----------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------
+class Solution {
+  
         public int maxAreaOfIsland(int[][] grid) {
         int maxArea = 0;
         for (int i = 0; i < grid.length; i++) {
@@ -83,5 +128,39 @@ class Solution {
             }
         }
         return maxArea;
+    }
+    
+     class Point {
+        int i;
+        int j;
+
+        int square;
+
+        public Point(int i, int j) {
+            this.i = i;
+            this.j = j;
+        }
+
+        public int getSquare() {
+            return square;
+        }
+
+        public void setSquare(int square) {
+            this.square = square;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Point point = (Point) o;
+            return i == point.i &&
+                    j == point.j;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(i, j);
+        }
     }
 }
