@@ -108,6 +108,7 @@ my leetcode problems solutions
 |70|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) | [Java](./dp/70.%20Climbing%20Stairs.txt)|Easy|
 |198|[House Robber](https://leetcode.com/problems/house-robber/description/) | [Java](./dp/198.%20House%20Robber.txt)|Easy|
 |42|[ Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [Java](https://github.com/llka/leetcode/blob/master/dp/42.%20Trapping%20Rain%20Water)|Hard| 
+|560|[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description/) | [Java](./dp/560.%20Subarray%20Sum%20Equals%20K)|Medium|
 #  Math
 
 | # | Title | Solution | Difficulty |
