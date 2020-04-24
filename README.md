@@ -99,6 +99,7 @@ my leetcode problems solutions
 |225|[Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/) | [Java](./design/225.%20Stack%20using%20Queues)|Easy|
 |232|[Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/) | [Java](./design/232.%20Queue%20using%20Stacks)|Easy|
 |380|[Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/) | [Python](./design/380.%20Insert%20Delete%20GetRandom%20O(1).py)|Medium|
+|146|[LRU Cache](https://leetcode.com/problems/lru-cache/) | [Java](./design/146.%20LRU%20Cache)|Medium|
 
 #  Dynamic Programming
 
